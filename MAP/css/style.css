@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'myriadpro-regular';
+    src: url('../fonts/myriadpro-regular.woff2') format('woff2'),
+    url('../fonts/myriadpro-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.container {
+    width: 1118px;
+    margin: 0 auto;
+    background-image: url("../img/background.jpg");
+    font-family: 'myriadpro-regular';
+    color: white;
+}
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrapper {
+    width: 745px;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 372px;
+    height: 376px;
+}
+.box__title {
+    margin-top: 10px;
+    margin-bottom: 2px;
+    font-size: 38px;
+}
+.box_theme_blue {
+    height: 752px;
+    background-color: rgba(0,54,99,0.75);
+}
+.box_theme_purple {
+    background-color: rgba(99,4,96,0.75);
+}
+.box_theme_red {
+    background-color: rgba(158, 11, 15, 0.75);
+}
+.box_theme_yellow {
+    background-color: rgba(255,242,0,0.75);
+}
+.box_theme_orange {
+    background-color: rgba(247,148,29,0.75);
+}
+
+.card {
+    width: 320px;
+    height: 260px;
+    background-color: rgba(42,42,42,0.34);
+}
+.card__row {
+    display: flex;
+    align-items: center;
+}
+.card__img {
+    margin-right: 10px;
+}
+.card__title {
+    font-size: 30px;
+}
+
+.card__row_margin {
+    margin: 12px 0 12px 15px;
+}
+.card__text_size_s {
+    font-size: 20px;
+}
+.card__text_size_m {
+    font-size: 26px;
+    margin: 25px 0 20px 15px;
+}
+
