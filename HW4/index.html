@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,103 +7,618 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 </head>
 <body>
-<div class="container d-flex">
-        <div class="box box_theme_blue">
-            <h2 class="box__title">Америка</h2>
-            <div class="card">
-                <div class="card__row">
-                    <img class="card__img" src="img/usa.jpg" alt="флаг">
-                    <h3 class="card__title">США</h3>
-                </div>
-                <p class="card__text card__text_size_m">Города:</p>
-                <div class="card__row card__row_margin">
-                    <img class="card__img" src="img/ny.jpg" alt="флаг">
-                    <p class="card__text card__text_size_s">Нью-Йрок</p>
-                </div>
-                <div class="card__row card__row_margin">
-                    <img class="card__img" src="img/chicago.jpg" alt="флаг">
-                    <p class="card__text card__text_size_s">Чикаго</p>
-                </div>
-            </div>
+<header class="header header__gradient">
+    <div class="container flex-b">
+        <a href="#">
+            <img class="logo" src="img/logo.png" alt="logo">
+        </a>
+        <div class="wrapper">
+            <nav>
+                <ul class="menu">
+                    <li class="menu__item menu__item_size_m"><a href="#" class="menu__link menu__link_padding_10">reality</a></li>
+                    <li class="menu__item menu__item_size_m"><a href="#" class="menu__link menu__link_padding_10">living</a></li>
+                    <li class="menu__item menu__item_size_m"><a href="#" class="menu__link menu__link_padding_10">education</a></li>
+                    <li class="menu__item menu__item_size_m"><a href="#" class="menu__link menu__link_padding_10">entertainment</a></li>
+                    <li class="menu__item menu__item_size_m"><a href="#" class="menu__link menu__link_padding_10">mobility</a></li>
+                </ul>
+            </nav>
+            <div class="header-search"><a href="#" class="header-search__link menu__link"><i class="fas fa-search"></i></a></div>
+            <div class="login"><a href="#" class="login__link menu__link"><i class="fas fa-user"></i>login</a></div>
         </div>
-        <div class="wrapper d-flex">
-            <div class="box box_theme_purple">
-                <h2 class="box__title">Америка</h2>
-                <div class="card">
-                    <div class="card__row">
-                        <img class="card__img" src="img/usa.jpg" alt="флаг">
-                        <h3 class="card__title">США</h3>
-                    </div>
-                    <p class="card__text card__text_size_m">Города:</p>
-                    <div class="card__row card__row_margin">
-                        <img class="card__img" src="img/ny.jpg" alt="флаг">
-                        <p class="card__text card__text_size_s">Нью-Йрок</p>
-                    </div>
-                    <div class="card__row card__row_margin">
-                        <img class="card__img" src="img/chicago.jpg" alt="флаг">
-                        <p class="card__text card__text_size_s">Чикаго</p>
-                    </div>
+    </div>
+</header>
+<div class="search flex-column">
+    <h1 class="search__text">What are you looking for?</h1>
+    <ul class="drop-list">
+        <li class="drop-list__item flex-b">
+            <p class="drop-list__text">Dubai</p>
+            <i class="fas fa-angle-down"></i>
+            <ul class="sub-menu sub-menu_radius_m">
+                <li class="sub-menu__item drop-list__text">Dubai</li>
+                <li class="sub-menu__item drop-list__text">Dubai</li>
+                <li class="sub-menu__item drop-list__text">Dubai</li>
+            </ul>
+        </li>
+        <li class="drop-list__item flex-b">
+            <p class="drop-list__text drop-list__text_white">Education</p>
+            <i class="fas fa-angle-down"></i>
+            <ul class="sub-menu sub-menu_radius_m">
+                <li class="sub-menu__item drop-list__text">Education</li>
+                <li class="sub-menu__item drop-list__text">Education</li>
+                <li class="sub-menu__item drop-list__text">Education</li>
+            </ul>
+        </li>
+    </ul>
+    <form action="get" class="form flex-column">
+        <input class="form__text form__text_size_m drop-list__text" type="text" name="keyword" placeholder="Keyword, name, date, ...">
+        <input class="form__submit form__submit_size_m" type="submit" value="search">
+    </form>
+</div>
+<main class="main">
+    <div class="header">
+        <div class="container flex-b">
+            <nav>
+                <ul class="menu">
+                    <li class="menu__item menu__item_size_s"><a href="#" class="menu__link menu__link_padding_12">recomended</a></li>
+                    <li class="menu__item menu__item_size_s"><a href="#" class="menu__link menu__link_padding_12">latest</a></li>
+                    <li class="menu__item menu__item_size_s"><a href="#" class="menu__link menu__link_padding_12">highlights</a></li>
+                </ul>
+            </nav>
+            <div class="wrapper">
+                <div class="main-drop-list flex-b">
+                    <p class="main-drop-list__text">Dubai</p>
+                    <i class="fas fa-angle-down main-drop-list__icon"></i>
+                    <ul class="sub-menu sub-menu_radius_s">
+                        <li class="sub-menu__item main-drop-list__text">Dubai</li>
+                        <li class="sub-menu__item main-drop-list__text">Dubai</li>
+                        <li class="sub-menu__item main-drop-list__text">Dubai</li>
+                    </ul>
                 </div>
+                <button class="map-button header__map-button"><span class="map-button__text">hide map</span><i class="map-button__icon fas fa-map-marker-alt"></i></button>
             </div>
-            <div class="box box_theme_red">
-                <h2 class="box__title">Америка</h2>
-                <div class="card">
-                    <div class="card__row">
-                        <img class="card__img" src="img/usa.jpg" alt="флаг">
-                        <h3 class="card__title">США</h3>
-                    </div>
-                    <p class="card__text card__text_size_m">Города:</p>
-                    <div class="card__row card__row_margin">
-                        <img class="card__img" src="img/ny.jpg" alt="флаг">
-                        <p class="card__text card__text_size_s">Нью-Йрок</p>
-                    </div>
-                    <div class="card__row card__row_margin">
-                        <img class="card__img" src="img/chicago.jpg" alt="флаг">
-                        <p class="card__text card__text_size_s">Чикаго</p>
-                    </div>
-                </div>
-            </div>
-            <div class="box box_theme_yellow">
-                <h2 class="box__title">Америка</h2>
-                <div class="card">
-                    <div class="card__row">
-                        <img class="card__img" src="img/usa.jpg" alt="флаг">
-                        <h3 class="card__title">США</h3>
-                    </div>
-                    <p class="card__text card__text_size_m">Города:</p>
-                    <div class="card__row card__row_margin">
-                        <img class="card__img" src="img/ny.jpg" alt="флаг">
-                        <p class="card__text card__text_size_s">Нью-Йрок</p>
-                    </div>
-                    <div class="card__row card__row_margin">
-                        <img class="card__img" src="img/chicago.jpg" alt="флаг">
-                        <p class="card__text card__text_size_s">Чикаго</p>
-                    </div>
-                </div>
-            </div>
-            <div class="box box_theme_orange">
-                <h2 class="box__title">Америка</h2>
-                <div class="card">
-                    <div class="card__row">
-                        <img class="card__img" src="img/usa.jpg" alt="флаг">
-                        <h3 class="card__title">США</h3>
-                    </div>
-                    <p class="card__text card__text_size_m">Города:</p>
-                    <div class="card__row card__row_margin">
-                        <img class="card__img" src="img/ny.jpg" alt="флаг">
-                        <p class="card__text card__text_size_s">Нью-Йрок</p>
-                    </div>
-                    <div class="card__row card__row_margin">
-                        <img class="card__img" src="img/chicago.jpg" alt="флаг">
-                        <p class="card__text card__text_size_s">Чикаго</p>
-                    </div>
-                </div>
+            <div class="filter">
+                <p class="filter__text">filter:</p>
+                <button class="filter__button filter__button_theme_green">
+                    <img src="img/home.png" alt="home">
+                </button>
+                <button class="filter__button filter__button_theme_blue">
+                    <img src="img/girl.png" alt="girl">
+                </button>
+                <button class="filter__button filter__button_theme_red">
+                    <img src="img/hat.png" alt="hat">
+                </button>
+                <button class="filter__button filter__button_theme_orange">
+                    <img src="img/music.png" alt="music">
+                </button>
+                <button class="filter__button filter__button_theme_violet">
+                    <img src="img/bus.png" alt="bus">
+                </button>
             </div>
         </div>
     </div>
-</div>
+    <div class="cards">
+        <div class="container flex-a">
+            <a href="#" class="card cards__card">
+                <div class="card__img card__img_theme_green">
+                    <img class="img" src="img/house.jpg" alt="house">
+                </div>
+                <div class="card__price">$2,990</div>
+                <div class="card__icon"><img src="img/home1.png" alt="home"></div>
+                <p class="card__text">2 bedroom house for rent in Dubai</p>
+                <h3 class="card__title">Vision Agency</h3>
+                <p class="card__rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star fa-star_margin"></i>
+                     (365)
+                </p>
+                <div class="show-more flex-column">
+                    <div class="show-more__button flex-b">
+                        <i class="fas fa-search show-more__icon show-more__icon_size_s"></i>
+                        <p class="show-more__text">show more</p>
+                    </div>
+                    <div class="show-more__row flex-b">
+                        <div class="wrapper">
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                        </div>
+                        <i class="far fa-comments show-more__icon show-more__icon_size_l"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="card cards__card">
+                <div class="card__img card__img_theme_orange">
+                    <img class="img" src="img/party.jpg" alt="house">
+                </div>
+                <div class="card__icon card__icon_theme_orange"><img src="img/music1.png" alt="home"></div>
+                <p class="card__text">Beach party festival 2014</p>
+                <h3 class="card__title card__title_theme_orange">Long beach</h3>
+                <p class="card__rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star fa-star_margin"></i>
+                    (1165)
+                </p>
+                <div class="show-more flex-column">
+                    <div class="show-more__button flex-b">
+                        <i class="fas fa-search show-more__icon show-more__icon_size_s"></i>
+                        <p class="show-more__text">show more</p>
+                    </div>
+                    <div class="show-more__row flex-b">
+                        <div class="wrapper">
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                        </div>
+                        <i class="far fa-comments show-more__icon show-more__icon_size_l"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="card cards__card">
+                <div class="card__img card__img_theme_violet">
+                    <img class="img" src="img/house.jpg" alt="house">
+                </div>
+                <div class="card__icon card__icon_theme_violet"><img src="img/home1.png" alt="home"></div>
+                <p class="card__text">Aliquam quis pulvinar purus</p>
+                <h3 class="card__title card__title_theme_violet">Bus Trans</h3>
+                <p class="card__rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star fa-star_margin"></i>
+                    (365)
+                </p>
+                <div class="show-more flex-column">
+                    <div class="show-more__button flex-b">
+                        <i class="fas fa-search show-more__icon show-more__icon_size_s"></i>
+                        <p class="show-more__text">show more</p>
+                    </div>
+                    <div class="show-more__row flex-b">
+                        <div class="wrapper">
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                        </div>
+                        <i class="far fa-comments show-more__icon show-more__icon_size_l"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="card cards__card">
+                <div class="card__img card__img_theme_green">
+                    <img class="img" src="img/house2.jpg" alt="house">
+                </div>
+                <div class="card__price">$2,990</div>
+                <div class="card__icon"><img src="img/home1.png" alt="home"></div>
+                <p class="card__text">4 bedroom house for rent in Dubai</p>
+                <h3 class="card__title">reality Agency</h3>
+                <p class="card__rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star fa-star_margin"></i>
+                    (165)
+                </p>
+                <div class="show-more flex-column">
+                    <div class="show-more__button flex-b">
+                        <i class="fas fa-search show-more__icon show-more__icon_size_s"></i>
+                        <p class="show-more__text">show more</p>
+                    </div>
+                    <div class="show-more__row flex-b">
+                        <div class="wrapper">
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                        </div>
+                        <i class="far fa-comments show-more__icon show-more__icon_size_l"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="review cards__card">
+                <div class="review__img review__img_theme_green">
+                    <img class="img" src="img/house3.jpg" alt="house">
+                </div>
+                <div class="review__row wrapper">
+                    <h3 class="review__title">Vision agency</h3>
+                    <p class="review__rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star fa-star_margin"></i>
+                        (365)
+                    </p>
+                </div>
+                <div class="review__icon review__icon_theme_green"><img src="img/home1.png" alt="home"></div>
+                <div class="review__author">
+                    <img src="img/author.png" alt="author" class="img">
+                </div>
+                <div class="review__column">
+                    <p class="review__rating review__rating_size_big">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </p>
+                    <p class="review__name">lucy-p</p>
+                    <p class="review__text">“Aliquam quis pulvinar purus.
+                        Etiam cursus ipsum quis enim faucibus,
+                        quis posuere orci ornare.
+                        Duis mattis sagittis fringilla.”</p>
+                </div>
+            </a>
+            <a href="#" class="review cards__card">
+                <div class="review__img review__img_theme_orange">
+                    <img class="img" src="img/club.jpg" alt="house">
+                </div>
+                <div class="review__row wrapper">
+                    <h3 class="review__title">Skybox club</h3>
+                    <p class="review__rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star fa-star_margin"></i>
+                        (1365)
+                    </p>
+                </div>
+                <div class="review__icon review__icon_theme_orange"><img src="img/home1.png" alt="home"></div>
+                <div class="review__author">
+                    <img src="img/author2.png" alt="author" class="img">
+                </div>
+                <div class="review__column">
+                    <p class="review__rating review__rating_size_big">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </p>
+                    <p class="review__name">peter145</p>
+                    <p class="review__text">“Aliquam quis pulvinar purus.
+                        Etiam cursus ipsum quis enim faucibus,
+                        quis posuere orci ornare.
+                        Duis mattis sagittis fringilla.”</p>
+                </div>
+            </a>
+            <a href="#" class="card cards__card">
+                <div class="card__img card__img_theme_green">
+                    <img class="img" src="img/house.jpg" alt="house">
+                </div>
+                <div class="card__price">$2,990</div>
+                <div class="card__icon"><img src="img/home1.png" alt="home"></div>
+                <p class="card__text">2 bedroom house for rent in Dubai</p>
+                <h3 class="card__title">Vision Agency</h3>
+                <p class="card__rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star fa-star_margin"></i>
+                    (365)
+                </p>
+                <div class="show-more flex-column">
+                    <div class="show-more__button flex-b">
+                        <i class="fas fa-search show-more__icon show-more__icon_size_s"></i>
+                        <p class="show-more__text">show more</p>
+                    </div>
+                    <div class="show-more__row flex-b">
+                        <div class="wrapper">
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                        </div>
+                        <i class="far fa-comments show-more__icon show-more__icon_size_l"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="card cards__card">
+                <div class="card__img card__img_theme_orange">
+                    <img class="img" src="img/party.jpg" alt="house">
+                </div>
+                <div class="card__icon card__icon_theme_orange"><img src="img/music1.png" alt="home"></div>
+                <p class="card__text">Beach party festival 2014</p>
+                <h3 class="card__title card__title_theme_orange">Long beach</h3>
+                <p class="card__rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star fa-star_margin"></i>
+                    (1165)
+                </p>
+                <div class="show-more flex-column">
+                    <div class="show-more__button flex-b">
+                        <i class="fas fa-search show-more__icon show-more__icon_size_s"></i>
+                        <p class="show-more__text">show more</p>
+                    </div>
+                    <div class="show-more__row flex-b">
+                        <div class="wrapper">
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                        </div>
+                        <i class="far fa-comments show-more__icon show-more__icon_size_l"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="card cards__card">
+                <div class="card__img card__img_theme_violet">
+                    <img class="img" src="img/house.jpg" alt="house">
+                </div>
+                <div class="card__icon card__icon_theme_violet"><img src="img/home1.png" alt="home"></div>
+                <p class="card__text">Aliquam quis pulvinar purus</p>
+                <h3 class="card__title card__title_theme_violet">Bus Trans</h3>
+                <p class="card__rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star fa-star_margin"></i>
+                    (365)
+                </p>
+                <div class="show-more flex-column">
+                    <div class="show-more__button flex-b">
+                        <i class="fas fa-search show-more__icon show-more__icon_size_s"></i>
+                        <p class="show-more__text">show more</p>
+                    </div>
+                    <div class="show-more__row flex-b">
+                        <div class="wrapper">
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                        </div>
+                        <i class="far fa-comments show-more__icon show-more__icon_size_l"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="card cards__card">
+                <div class="card__img card__img_theme_green">
+                    <img class="img" src="img/house2.jpg" alt="house">
+                </div>
+                <div class="card__price">$2,990</div>
+                <div class="card__icon"><img src="img/home1.png" alt="home"></div>
+                <p class="card__text">4 bedroom house for rent in Dubai</p>
+                <h3 class="card__title">reality Agency</h3>
+                <p class="card__rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star fa-star_margin"></i>
+                    (165)
+                </p>
+                <div class="show-more flex-column">
+                    <div class="show-more__button flex-b">
+                        <i class="fas fa-search show-more__icon show-more__icon_size_s"></i>
+                        <p class="show-more__text">show more</p>
+                    </div>
+                    <div class="show-more__row flex-b">
+                        <div class="wrapper">
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                        </div>
+                        <i class="far fa-comments show-more__icon show-more__icon_size_l"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="review cards__card">
+                <div class="review__img review__img_theme_orange">
+                    <img class="img" src="img/club.jpg" alt="house">
+                </div>
+                <div class="review__row wrapper">
+                    <h3 class="review__title">Skybox club</h3>
+                    <p class="review__rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star fa-star_margin"></i>
+                        (1365)
+                    </p>
+                </div>
+                <div class="review__icon review__icon_theme_orange"><img src="img/home1.png" alt="home"></div>
+                <div class="review__author">
+                    <img src="img/author2.png" alt="author" class="img">
+                </div>
+                <div class="review__column">
+                    <p class="review__rating review__rating_size_big">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </p>
+                    <p class="review__name">peter145</p>
+                    <p class="review__text">“Aliquam quis pulvinar purus.
+                        Etiam cursus ipsum quis enim faucibus,
+                        quis posuere orci ornare.
+                        Duis mattis sagittis fringilla.”</p>
+                </div>
+            </a>
+            <a href="#" class="card cards__card">
+                <div class="card__img card__img_theme_green">
+                    <img class="img" src="img/house.jpg" alt="house">
+                </div>
+                <div class="card__price">$2,990</div>
+                <div class="card__icon"><img src="img/home1.png" alt="home"></div>
+                <p class="card__text">2 bedroom house for rent in Dubai</p>
+                <h3 class="card__title">Vision Agency</h3>
+                <p class="card__rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star fa-star_margin"></i>
+                    (365)
+                </p>
+                <div class="show-more flex-column">
+                    <div class="show-more__button flex-b">
+                        <i class="fas fa-search show-more__icon show-more__icon_size_s"></i>
+                        <p class="show-more__text">show more</p>
+                    </div>
+                    <div class="show-more__row flex-b">
+                        <div class="wrapper">
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                        </div>
+                        <i class="far fa-comments show-more__icon show-more__icon_size_l"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="card cards__card">
+                <div class="card__img card__img_theme_orange">
+                    <img class="img" src="img/party.jpg" alt="house">
+                </div>
+                <div class="card__icon card__icon_theme_orange"><img src="img/music1.png" alt="home"></div>
+                <p class="card__text">Beach party festival 2014</p>
+                <h3 class="card__title card__title_theme_orange">Long beach</h3>
+                <p class="card__rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star fa-star_margin"></i>
+                    (1165)
+                </p>
+                <div class="show-more flex-column">
+                    <div class="show-more__button flex-b">
+                        <i class="fas fa-search show-more__icon show-more__icon_size_s"></i>
+                        <p class="show-more__text">show more</p>
+                    </div>
+                    <div class="show-more__row flex-b">
+                        <div class="wrapper">
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                            <i class="far fa-star show-more__icon show-more__icon_size_m"></i>
+                        </div>
+                        <i class="far fa-comments show-more__icon show-more__icon_size_l"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="container flex-a">
+            <button class="cards-button cards__button">Load more <i class="fas fa-long-arrow-alt-right"></i></button>
+        </div>
+    </div>
+    <div class="offer flex-column">
+        <h2 class="offer__title">What can DuHoot offer to you?</h2>
+        <p class="offer__text">Etiam cursus ipsum quis enim faucibus</p>
+        <div class="categories wrapper">
+            <button class="categories__button categories__button_theme_green">
+                <img src="img/home2.png" alt="home">
+            </button>
+            <button class="categories__button categories__button_margin categories__button_theme_blue">
+                <img src="img/girl2.png" alt="girl">
+            </button>
+            <button class="categories__button categories__button_margin categories__button_theme_red">
+                <img src="img/hat2.png" alt="hat">
+            </button>
+            <button class="categories__button categories__button_margin categories__button_theme_orange">
+                <img src="img/music2.png" alt="music">
+            </button>
+            <button class="categories__button categories__button_margin categories__button_theme_violet">
+                <img src="img/bus2.png" alt="bus">
+            </button>
+        </div>
+        <div class="reality">
+            <p class="reality__title">Reality</p>
+            <div class="wrapper">
+                <div class="reality__icon">
+                    <i class="fas fa-bolt icon"></i>
+                </div>
+                <p class="reality__text">Cum sociis natoque penatibus et magnis
+                    dis parturient montes, nascetur ridiculus mus.
+                    Morbi gravida tellus in purus pharetra,
+                    vel dignissim mauris viverra.
+                    Maecenas vitae risus est. In hendrerit, massa at.</p>
+                <div class="reality__icon reality__icon_margin">
+                    <i class="fas fa-leaf icon"></i>
+                </div>
+                <p class="reality__text">Cum sociis natoque penatibus et magnis
+                    dis parturient montes, nascetur ridiculus mus.
+                    Morbi gravida tellus in purus pharetra,
+                    vel dignissim mauris viverra.
+                    Maecenas vitae risus est. In hendrerit, massa at.</p>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container flex-column">
+        <h2 class="footer__title">Subscribe to our newsletter</h2>
+        <form action="get" class="form">
+            <input class="form__text form__text_size_s drop-list__text" type="mail" name="mail" required placeholder="your@email.com">
+            <input class="form__submit form__submit_size_s" type="submit" value="subscribe">
+            <i class="far fa-envelope form__icon"></i>
+        </form>
+        <div class="wrapper">
+            <div class="footer__list">
+                <p class="footer__text">Ipsum quis</p>
+                <ul>
+                    <li class="footer__item"><a href="#" class="footer__link">Aliquam quis</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Pulvinar purus</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Etiam cursus</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Ipsum quis</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Enim faucibus</a></li>
+                </ul>
+            </div>
+            <div class="footer__list">
+                <p class="footer__text">Ipsum quis</p>
+                <ul>
+                    <li class="footer__item"><a href="#" class="footer__link">Aliquam quis</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Pulvinar purus</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Etiam cursus</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Ipsum quis</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Enim faucibus</a></li>
+                </ul>
+            </div>
+            <div class="footer__list">
+                <p class="footer__text">Follow us</p>
+                <ul class="wrapper">
+                    <li class="footer__item footer__item_margin"><a href="#" class="footer__link"><i class="fab fa-facebook-f footer__icon"></i></a></li>
+                    <li class="footer__item footer__item_margin"><a href="#" class="footer__link"><i class="fab fa-twitter footer__icon"></i></a></li>
+                    <li class="footer__item footer__item_margin"><a href="#" class="footer__link"><i class="fab fa-google-plus-g footer__icon"></i></a></li>
+                    <li class="footer__item footer__item_margin"><a href="#" class="footer__link"><i class="fab fa-youtube footer__icon"></i></a></li>
+                </ul>
+                <p class="footer__copyright">Copyright © All Rights reserved</p>
+            </div>
+        </div>
+    </div>
 
+</footer>
 </body>
 </html>
