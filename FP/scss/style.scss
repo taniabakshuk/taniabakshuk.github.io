@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'roboto-bold';
+  src: url('../fonts/roboto-bold.woff2') format('woff2'),
+  url('../fonts/roboto-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'roboto-regular';
+  src: url('../fonts/roboto-regular.woff2') format('woff2'),
+  url('../fonts/roboto-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@import "colors";
+
+.header {
+  background-color: $grafit;
+}
+.container {
+  width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto;
+  height: 100%;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo__img {
+  display: block;
+}
+.home {
+  height: 345px;
+}
+
+@import "hero";
+@import "button";
+@import "menu";
+@import "cell";

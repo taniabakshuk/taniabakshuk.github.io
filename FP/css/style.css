@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'roboto-bold';
+  src: url("../fonts/roboto-bold.woff2") format("woff2"), url("../fonts/roboto-bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'roboto-regular';
+  src: url("../fonts/roboto-regular.woff2") format("woff2"), url("../fonts/roboto-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+.header {
+  background-color: #252e30; }
+
+.container {
+  width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto;
+  height: 100%; }
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.logo__img {
+  display: block; }
+
+.home {
+  height: 345px; }
+
+.hero__slide {
+  position: relative; }
+.hero__img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  height: 1000px;
+  width: 100%; }
+.hero__description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); }
+.hero__title {
+  font: 60px 'roboto-bold';
+  text-transform: uppercase;
+  color: white;
+  line-height: 83px;
+  position: relative;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white; }
+.hero__button {
+  margin-top: 50px; }
+  .hero__button:hover {
+    border-color: #2ecc71;
+    color: #2ecc71; }
+
+.button {
+  font: 18px 'roboto-bold';
+  text-transform: uppercase;
+  color: white;
+  border: 2px solid white;
+  padding: 20px 40px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 500ms; }
+  .button:active {
+    outline: none; }
+  .button:focus {
+    outline: none; }
+
+.menu {
+  list-style: none;
+  display: flex; }
+  .menu__item {
+    height: 70px;
+    font: 16px 'roboto-bold';
+    text-transform: uppercase; }
+    .menu__item:last-child .menu__link {
+      padding-right: 0; }
+  .menu__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 0 20px;
+    height: 100%;
+    transition: 500ms; }
+    .menu__link:hover {
+      color: #2ecc71; }
+
+.cell {
+  width: 350px; }
+  .cell__title {
+    font: 30px 'roboto-bold';
+    color: #566366;
+    text-transform: uppercase; }
+  .cell__text {
+    margin-top: 45px;
+    font: 18px 'roboto-regular';
+    color: #919191;
+    line-height: 30px;
+    text-align: justify;
+    letter-spacing: -0.5px; }
+
+/*# sourceMappingURL=style.css.map */

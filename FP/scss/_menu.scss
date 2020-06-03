@@ -1,0 +1,27 @@
+.menu {
+  list-style: none;
+  display: flex;
+
+  &__item {
+    height: 70px;
+    font: 16px 'roboto-bold';
+    text-transform: uppercase;
+    &:last-child .menu__link {
+      padding-right: 0;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 0 20px;
+    height: 100%;
+    transition: 500ms;
+    &:hover {
+      color: #2ecc71;
+    }
+  }
+
+
+}

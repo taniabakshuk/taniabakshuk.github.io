@@ -1,0 +1,16 @@
+.cell {
+  width: 350px;
+  &__title {
+    font: 30px 'roboto-bold';
+    color: $darkgrey;
+    text-transform: uppercase;
+  }
+  &__text {
+    margin-top: 45px;
+    font: 18px 'roboto-regular';
+    color: $grey;
+    line-height: 30px;
+    text-align: justify;
+    letter-spacing: -0.5px;
+  }
+}

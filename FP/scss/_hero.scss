@@ -1,0 +1,40 @@
+.hero {
+  &__slide {
+    position: relative;
+  }
+  &__img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    height: 1000px;
+    width: 100%;
+  }
+  &__description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }
+  &__title {
+    font: 60px 'roboto-bold';
+    text-transform: uppercase;
+    color: white;
+    line-height: 83px;
+    position: relative;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+
+  }
+  &__button {
+    margin-top: 50px;
+    &:hover {
+      border-color: $green;
+      color: $green;
+    }
+  }
+
+
+}
