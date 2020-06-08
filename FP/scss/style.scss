@@ -58,22 +58,22 @@
 .header {
   background-color: $headerBgColor;
 }
-.header-wrapper {
+.header>.container {
   @include flex(space-between, center, wrap);
 }
-.home-wrapper {
+.home>.container {
   @include flex(space-between, flex-start);
 }
 @media (max-width: 576px) {
-  .home-wrapper {
+  .home>.container {
     @include flex-column();
   }
 }
-.about-wrapper {
+.about>.container {
   @include flex();
 }
 @media (max-width: 1200px) {
-  .about-wrapper {
+  .about>.container {
     @include flex-column(column, center);
   }
 }
