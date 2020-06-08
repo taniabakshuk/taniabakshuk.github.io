@@ -1,16 +1,37 @@
 .cell {
-  width: 350px;
   &__title {
-    font: 30px 'roboto-bold';
-    color: $darkgrey;
+    font: 22px 'roboto-bold';
+    color: $fontTitle;
     text-transform: uppercase;
   }
   &__text {
-    margin-top: 45px;
+    margin-top: 20px;
     font: 18px 'roboto-regular';
-    color: $grey;
+    color: $fontText;
     line-height: 30px;
     text-align: justify;
-    letter-spacing: -0.5px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .cell__text {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .cell__title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cell__text {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .cell__title {
+    font-size: 16px;
   }
 }

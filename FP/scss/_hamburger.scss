@@ -1,0 +1,96 @@
+.hamburger {
+  display: none;
+  &__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 100;
+    transition: 500ms;
+    &:hover {
+      background-color: rgba(0,0,0,.5);
+    }
+  }
+
+  &__btn > span,
+  &__btn > span::before,
+  &__btn > span::after {
+    display: block;
+    position: absolute;
+    left: 4px;
+    width: 40px;
+    height: 2px;
+    background-color: $green;
+  }
+  &__btn > span::before {
+    content: '';
+    top: -8px;
+    left: 0;
+  }
+  &__btn > span::after {
+    content: '';
+    top: 8px;
+    left: 0;
+  }
+
+  &__menu {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: 100%;
+    width: 300px;
+    margin: 0;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    list-style: none;
+    background-color: rgba(0,0,0,0.8);
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    z-index: 10;
+
+  }
+
+  &__item {
+    display: block;
+    padding: 12px 24px;
+    color: white;
+    font-family: 'roboto-bold';
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 500ms;
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+#hamburger__toggle {
+  opacity: 0;
+}
+
+#hamburger__toggle:checked ~ .hamburger__btn > span {
+  transform: rotate(45deg);
+}
+#hamburger__toggle:checked ~ .hamburger__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#hamburger__toggle:checked ~ .hamburger__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#hamburger__toggle:checked ~ .hamburger__menu {
+  visibility: visible;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}

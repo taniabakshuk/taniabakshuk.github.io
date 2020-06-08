@@ -1,0 +1,128 @@
+.about {
+  min-height: 754px;
+  background-color :$aboutBgColor;
+  position: relative;
+  &__img {
+    width: 510px;
+    position: relative;
+    & img {
+      display: block;
+      position: absolute;
+      right: 100px;
+    }
+  }
+  &__box {
+    max-width: 680px;
+  }
+  &__article {
+    max-width: 680px;
+    margin-top: 95px;
+  }
+  &__title {
+    font: 30px 'roboto-bold';
+    color: $fontTitle;
+    text-transform: uppercase;
+  }
+  &__text {
+    margin-top: 35px;
+    font: 18px 'roboto-regular';
+    color: $fontText;
+    line-height: 30px;
+    text-align: justify;
+  }
+  &__items {
+    margin-top: 65px;
+    margin-bottom: 15px;
+    @include flex(space-between, stretch, wrap, space-between);
+  }
+  &__item {
+    width: 48%;
+    @include flex();
+    margin-bottom: 50px;
+  }
+  &__icon {
+    flex-shrink: 0;
+    width: 41px;
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .about__img img{
+    max-width: 100%;
+    right: 30px;
+  }
+}
+
+@media (max-width: 1257px) {
+  .about__img img {
+    width: 96%;
+  }
+}
+
+@media (max-width: 1200px){
+  .about__img {;
+    width: auto;
+    position: static;
+    & img {
+      max-width: 400px;
+      width: 100%;
+      position: static;
+    }
+  }
+  .about__box {
+    max-width: 100%;
+  }
+  .about__article {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+  .about__items {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .about__title {
+    font-size: 20px;
+  }
+  .about__text {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__article {
+    margin-top: 30px;
+  }
+  .about__item {
+    margin-bottom: 30px;
+  }
+  .about__items {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  .about__icon {
+    margin-right: 15px;
+  }
+  .about__title {
+    font-size: 18px;
+  }
+  .about__text {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about__items {
+    @include flex-column();
+  }
+  .about__item {
+    width: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+@mixin flex ($jc:flex-start, $ai:stretch, $fw:nowrap, $ac:stretch) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-wrap: $fw;
+  align-content: $ac;
+}
+@mixin flex-column ($fd:column, $ai:stretch) {
+  display: flex;
+  flex-direction: $fd;
+  align-items: $ai;
+}
