@@ -78,11 +78,9 @@
       margin-top: 20px;
       font-size: 16px;
     }
-    &__scale {
-      height: 20px;
-      & p {
-        line-height: 20px;
-      }
+    &__scale P {
+      padding-right: 5px;
+      font-size: 14px;
     }
   }
 }
