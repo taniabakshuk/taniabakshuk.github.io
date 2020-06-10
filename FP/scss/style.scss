@@ -24,9 +24,12 @@
 @import "button";
 @import "menu";
 @import "home";
-@import "cell";
+@import "about-item";
 @import "about";
 @import "hamburger";
+@import "skills";
+@import "percents";
+@import "resume-download";
 
 .container {
   max-width: 1200px;
@@ -61,6 +64,11 @@
 .header>.container {
   @include flex(space-between, center, wrap);
 }
+@media (max-width: 768px) {
+  .header>.container {
+    height: 55px;
+  }
+}
 .home>.container {
   @include flex(space-between, flex-start);
 }
@@ -77,6 +85,18 @@
     @include flex-column(column, center);
   }
 }
+.skills>.container {
+  @include flex(space-between);
+}
+@media (max-width: 576px) {
+  .skills>.container {
+    @include flex-column();
+  }
+}
+.resume-download>.container {
+  @include flex-column(column, center);
+}
+
 
 
 

@@ -1,0 +1,73 @@
+.skills {
+  &__box {
+    width: 540px;
+  }
+  &__title {
+    margin-top: 95px;
+    font: 30px 'roboto-bold';
+    color: $fontTitle;
+    text-transform: uppercase;
+  }
+  &__text {
+    margin-top: 35px;
+    font: 18px 'roboto-regular';
+    color: $fontText;
+    line-height: 30px;
+    text-align: justify;
+  }
+  &__button {
+    margin-top: 45px;
+    color: $green;
+    border: 2px solid $green;
+    &:hover {
+      background-color: $green;
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .skills__box {
+    margin-right: 30px;
+  }
+  .skills__title {
+    margin-top: 40px;
+  }
+  .skills__text {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .skills__title {
+    font-size: 20px;
+  }
+  .skills__text {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+}
+@media (max-width: 768px) {
+  .skills__title {
+    font-size: 18px;
+  }
+  .skills__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .skills__button {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills__box {
+    width: 100%;
+    margin-right: 0;
+  }
+  .skills__button {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,53 @@
+.about-item {
+  width: 48%;
+  @include flex();
+  &__icon {
+    flex-shrink: 0;
+    width: 41px;
+    margin-right: 25px;
+  }
+  &__title {
+    font: 22px 'roboto-bold';
+    color: $fontTitle;
+    text-transform: uppercase;
+  }
+  &__text {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font: 18px 'roboto-regular';
+    color: $fontText;
+    line-height: 30px;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-item__text {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .about-item__title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-item__icon {
+    margin-right: 15px;
+  }
+  .about-item__text {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .about-item__title {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .about-item {
+    width: 100%;
+  }
+}

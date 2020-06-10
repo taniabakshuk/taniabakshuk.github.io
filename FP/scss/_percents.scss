@@ -1,0 +1,94 @@
+.percents {
+  width: 550px;
+  &__title {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font: 22px 'roboto-bold';
+    color: $fontTitle;
+    text-transform: uppercase;
+    &:first-child {
+      margin-top: 130px;
+    }
+  }
+  &__scale {
+    max-width: 100%;
+    height: 30px;
+    background-color: #f2f2f1;
+    &:last-child {
+      margin-bottom: 100px;
+    }
+    & p {
+      padding-right: 10px;
+      max-width: 90%;
+      height: 100%;
+      color: white;
+      font: 18px 'roboto-bold';
+      text-align: end;
+      line-height: 30px;
+      animation: percents 1.5s forwards;
+      @keyframes percents {
+        from {
+          width: 0;
+          background-color: $green;
+        }
+        to {
+          width: 100%;
+          background-color: $green;
+        }
+      }
+    }
+    &:nth-of-type(2)>p {
+      max-width: 80%;
+    }
+    &:nth-of-type(4)>p {
+      max-width: 70%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .percents {
+    &__title:first-child {
+        margin-top: 45px;
+      }
+    &__scale:last-child {
+        margin-bottom: 45px;
+      }
+  }
+}
+
+@media (max-width: 992px) {
+  .percents {
+    &__title {
+      margin-top: 25px;
+      font-size: 18px;
+    }
+    &__scale {
+      height: 25px;
+      & p {
+        line-height: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .percents {
+    &__title {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+    &__scale {
+      height: 20px;
+      & p {
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .percents {
+    width: 100%;
+  }
+}
