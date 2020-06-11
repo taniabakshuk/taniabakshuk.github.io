@@ -1,0 +1,58 @@
+.resume {
+  &__box {
+    @include flex(space-between);
+    border-bottom: 1px solid #ccc;
+  }
+  &__article {
+    width: 550px;
+    margin-top: 95px;
+    margin-right: 70px;
+  }
+  &__cards {
+    width: 550px;
+    margin-top: 180px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .resume {
+    &__article {
+      margin-top: 40px;
+      margin-right: 50px;
+    }
+    &__cards {
+      margin-top: 95px;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .resume {
+    &__article {
+      margin-right: 30px;
+    }
+    &__cards {
+      margin-top: 80px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .resume {
+    &__cards {
+      margin-top: 77px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .resume{
+    &__box {
+      @include flex-column();
+    }
+    &__article {
+      width: 100%;
+    }
+    &__cards {
+      width: 100%;
+      margin-top: 50px;
+    }
+  }
+}

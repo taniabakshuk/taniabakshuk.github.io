@@ -28,16 +28,22 @@
 }
 
 @media (max-width: 1200px) {
-  .menu__item {
-    font-size: 14px;
+  .menu {
+    &__item {
+      font-size: 14px;
+    }
   }
 }
+
 @media (max-width: 992px) {
-  .menu__item {
-    font-size: 12px;
-  }
-  .menu__link {
-    padding: 0 10px;
+  .menu {
+    &__item {
+      height: 60px;
+      font-size: 12px;
+    }
+    &__link {
+      padding: 0 10px;
+    }
   }
 }
 

@@ -1,64 +1,81 @@
 .skills {
   &__box {
     width: 540px;
+    padding-top: 95px;
   }
-  &__title {
-    margin-top: 95px;
-    font: 30px 'roboto-bold';
-    color: $fontTitle;
-    text-transform: uppercase;
+  &__percents {
+    width: 550px;
+    padding-top: 130px;
+    padding-bottom: 100px;
   }
-  &__text {
-    margin-top: 35px;
-    font: 18px 'roboto-regular';
-    color: $fontText;
-    line-height: 30px;
-    text-align: justify;
-  }
-  &__button {
-    margin-top: 45px;
-    color: $green;
-    border: 2px solid $green;
-    &:hover {
-      background-color: $green;
+  &__scale {
+    max-width: 100%;
+    height: 30px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    background-color: #f2f2f1;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    & p {
+      padding-right: 10px;
+      max-width: 90%;
+      height: 100%;
       color: white;
+      font: 18px 'roboto-bold';
+      text-align: end;
+      line-height: 30px;
+      animation: percents 1.5s forwards;
+      @keyframes percents {
+        from {
+          width: 0;
+          background-color: $green;
+        }
+        to {
+          width: 100%;
+          background-color: $green;
+        }
+      }
+    }
+    &:nth-of-type(2)>p {
+      max-width: 80%;
+    }
+    &:nth-of-type(4)>p {
+      max-width: 70%;
     }
   }
 }
 
 @media (max-width: 1200px) {
   .skills__box {
+    padding-top: 40px;
     margin-right: 30px;
   }
-  .skills__title {
-    margin-top: 40px;
-  }
-  .skills__text {
-    margin-top: 15px;
+  .skills__percents {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 
 @media (max-width: 992px) {
-  .skills__title {
-    font-size: 20px;
+  .skills__percents {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
-  .skills__text {
-    font-size: 16px;
-    line-height: 25px;
+  .skills__scale {
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    & p {
+      line-height: 25px;
+    }
   }
-
 }
+
 @media (max-width: 768px) {
-  .skills__title {
-    font-size: 18px;
-  }
-  .skills__text {
+  .skills__scale p {
+    padding-right: 5px;
     font-size: 14px;
-    line-height: 22px;
-  }
-  .skills__button {
-    margin-top: 30px;
-    margin-bottom: 40px;
   }
 }
 
@@ -67,7 +84,7 @@
     width: 100%;
     margin-right: 0;
   }
-  .skills__button {
-    margin-bottom: 0;
+  .skills__percents {
+    width: 100%;
   }
 }

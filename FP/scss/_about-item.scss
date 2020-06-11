@@ -6,10 +6,8 @@
     width: 41px;
     margin-right: 25px;
   }
-  &__title {
-    font: 22px 'roboto-bold';
-    color: $fontTitle;
-    text-transform: uppercase;
+  &__mobile {
+    display: none;
   }
   &__text {
     margin-top: 20px;
@@ -25,15 +23,21 @@
   .about-item__text {
     margin-top: 15px;
     font-size: 16px;
-    line-height: 25px;
-  }
-  .about-item__title {
-    font-size: 18px;
+    line-height: 27px;
   }
 }
 
 @media (max-width: 768px) {
   .about-item__icon {
+    display: none;
+    margin-right: 15px;
+    flex-shrink: 0;
+    width: 41px;
+  }
+  .about-item__mobile {
+    display: block;
+    flex-shrink: 0;
+    width: 32px;
     margin-right: 15px;
   }
   .about-item__text {
@@ -41,9 +45,6 @@
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 22px;
-  }
-  .about-item__title {
-    font-size: 16px;
   }
 }
 @media (max-width: 576px) {

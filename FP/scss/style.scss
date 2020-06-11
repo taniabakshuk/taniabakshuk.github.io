@@ -19,6 +19,9 @@
 }
 
 @import "colors";
+@import "text";
+@import "title-h2";
+@import "title-h3";
 @import "mixin";
 @import "hero";
 @import "button";
@@ -28,8 +31,9 @@
 @import "about";
 @import "hamburger";
 @import "skills";
-@import "percents";
 @import "resume-download";
+@import "resume";
+@import "resume-card";
 
 .container {
   max-width: 1200px;
@@ -94,8 +98,8 @@
   }
 }
 .resume-download>.container {
-  @include flex-column(column, center);
-}
+   @include flex(center);
+ }
 
 
 

@@ -31,32 +31,31 @@
     border-top: 2px solid white;
     border-bottom: 2px solid white;
   }
-  &__button {
-    margin-top: 50px;
-    &:hover {
-      border-color: $green;
-      color: $green;
+}
+
+@media (max-width: 992px) {
+  .hero {
+    &__title {
+      font-size: 50px;
+      line-height: 65px;
     }
   }
 }
 
-@media (max-width: 992px) {
-  .hero__title {
-    font-size: 50px;
-    line-height: 65px;
-  }
-}
-
 @media (max-width: 768px) {
-  .hero__title {
-    font-size: 40px;
-    line-height: 55px;
+  .hero {
+    &__title {
+      font-size: 40px;
+      line-height: 55px;
+    }
   }
 }
 
 @media (max-width: 576px) {
-  .hero__title {
-    font-size: 22px;
-    line-height: 30px;
+  .hero {
+    &__title {
+      font-size: 22px;
+      line-height: 30px;
+    }
   }
 }
