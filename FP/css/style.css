@@ -21,12 +21,16 @@
   text-align: justify; }
   .text_center {
     text-align: center; }
+  .text_margin_20 {
+    margin-top: 20px; }
 
 @media (max-width: 992px) {
   .text {
     margin-top: 15px;
     font-size: 16px;
-    line-height: 27px; } }
+    line-height: 27px; }
+    .text_margin_20 {
+      margin-top: 15px; } }
 @media (max-width: 768px) {
   .text {
     font-size: 14px;
@@ -188,53 +192,6 @@
     margin: 30px 0; }
     .home__cell:nth-child(2) {
       margin: 0; } }
-.about-item {
-  width: 48%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-wrap: nowrap;
-  align-content: stretch; }
-  .about-item__icon {
-    flex-shrink: 0;
-    width: 41px;
-    margin-right: 25px; }
-  .about-item__mobile {
-    display: none; }
-  .about-item__text {
-    margin-top: 20px;
-    margin-bottom: 50px;
-    font: 18px 'roboto-regular';
-    color: #919191;
-    line-height: 30px;
-    text-align: justify; }
-
-@media (max-width: 992px) {
-  .about-item__text {
-    margin-top: 15px;
-    font-size: 16px;
-    line-height: 27px; } }
-@media (max-width: 768px) {
-  .about-item__icon {
-    display: none;
-    margin-right: 15px;
-    flex-shrink: 0;
-    width: 41px; }
-
-  .about-item__mobile {
-    display: block;
-    flex-shrink: 0;
-    width: 32px;
-    margin-right: 15px; }
-
-  .about-item__text {
-    margin-top: 15px;
-    margin-bottom: 30px;
-    font-size: 14px;
-    line-height: 22px; } }
-@media (max-width: 576px) {
-  .about-item {
-    width: 100%; } }
 .about {
   min-height: 754px;
   background-color: #f2f2f1;
@@ -259,6 +216,20 @@
     align-items: stretch;
     flex-wrap: wrap;
     align-content: space-between; }
+  .about__item {
+    width: 48%;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-content: stretch; }
+  .about__icon {
+    flex-shrink: 0;
+    width: 41px;
+    margin-right: 25px; }
+  .about__mobile {
+    display: none; }
 
 @media (max-width: 1600px) {
   .about__img img {
@@ -275,29 +246,41 @@
       max-width: 400px;
       width: 100%;
       position: static; }
-
   .about__box {
     max-width: 100%; }
-
   .about__article {
     max-width: 100%;
     margin-top: 40px; }
-
   .about__items {
     margin-top: 40px;
     margin-bottom: 0; } }
+@media (max-width: 992px) {
+  .about__item {
+    padding-bottom: 35px; } }
 @media (max-width: 768px) {
   .about__article {
     margin-top: 30px; }
-
   .about__items {
     margin-top: 30px;
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .about__icon {
+    display: none;
+    margin-right: 15px;
+    flex-shrink: 0;
+    width: 41px; }
+  .about__mobile {
+    display: block;
+    flex-shrink: 0;
+    width: 32px;
+    margin-right: 15px; } }
 @media (max-width: 576px) {
   .about__items {
     display: flex;
     flex-direction: column;
-    align-items: stretch; } }
+    align-items: stretch; }
+  .about__item {
+    width: 100%;
+    padding-bottom: 25px; } }
 .hamburger {
   display: none; }
   .hamburger__btn {
@@ -512,54 +495,48 @@
   .resume__cards {
     width: 100%;
     margin-top: 50px; } }
-.resume-card__title {
-  margin-bottom: 15px;
-  font: 22px 'roboto-bold';
-  color: #566366;
-  text-transform: uppercase; }
-.resume-card__text {
-  padding-top: 30px;
-  padding-bottom: 75px;
-  border-top: 1px solid #ccc;
-  font: 18px 'roboto-regular';
-  color: #919191;
-  line-height: 30px;
-  text-align: justify; }
-  .resume-card__text:first-of-type {
-    margin: 0;
-    padding: 0;
-    border-top: none; }
-  .resume-card__text span {
-    font-weight: 600; }
-.resume-card__label {
-  width: 70px;
-  padding: 7px;
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 30px;
-  font: 14px 'roboto-bold';
-  background-color: #2ecc71;
-  color: white; }
+.resume-card {
+  padding-bottom: 75px; }
+  .resume-card__text {
+    padding-top: 30px;
+    border-top: 1px solid #ccc;
+    font: 18px 'roboto-regular';
+    color: #919191;
+    line-height: 30px;
+    text-align: justify; }
+    .resume-card__text:first-of-type {
+      margin-top: 15px;
+      padding: 0;
+      border-top: none; }
+    .resume-card__text span {
+      font-weight: 600; }
+  .resume-card__label {
+    width: 70px;
+    padding: 7px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font: 14px 'roboto-bold';
+    background-color: #2ecc71;
+    color: white; }
 
 @media (max-width: 1200px) {
-  .resume-card__text {
-    padding-top: 20px;
-    padding-bottom: 60px; } }
+  .resume-card {
+    padding-bottom: 60px; }
+    .resume-card__text {
+      padding-top: 20px; } }
 @media (max-width: 992px) {
-  .resume-card__title {
-    font-size: 18px; }
   .resume-card__text {
     font-size: 16px;
     line-height: 27px; } }
 @media (max-width: 768px) {
-  .resume-card__title {
-    font-size: 16px; }
-  .resume-card__text {
-    font-size: 14px;
-    line-height: 22px;
+  .resume-card {
     padding-bottom: 40px; }
-  .resume-card__label {
-    margin-bottom: 20px; } }
+    .resume-card__text {
+      font-size: 14px;
+      line-height: 22px; }
+    .resume-card__label {
+      margin-bottom: 20px; } }
 .container {
   max-width: 1200px;
   padding: 0 10px;
