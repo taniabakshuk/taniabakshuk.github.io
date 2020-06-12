@@ -1,0 +1,45 @@
+.button {
+  padding: 20px 40px;
+  margin-top: 45px;
+  font: 18px 'roboto-bold';
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 500ms;
+  &:active {
+    outline: none;
+  }
+  &:focus {
+    outline: none;
+  }
+  &_white {
+    color: white;
+    border: 2px solid white;
+    &:hover {
+      color: $green;
+      border: 2px solid $green;
+    }
+  }
+  &_green {
+    color: $green;
+    border: 2px solid $green;
+    &:hover {
+      color: white;
+      background-color: $green;
+  }
+  }
+}
+
+@media (max-width: 992px) {
+  .button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .button {
+    font-size: 14px;
+  }
+}
