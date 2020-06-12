@@ -21,7 +21,7 @@
   &__items {
     margin-top: 65px;
     margin-bottom: 15px;
-    @include flex(space-between, stretch, wrap, space-between);
+    @include flex(space-between, stretch, wrap);
   }
   &__item {
     width: 48%;
