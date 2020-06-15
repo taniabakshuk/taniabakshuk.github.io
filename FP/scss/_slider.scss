@@ -1,0 +1,34 @@
+.slick-slider {
+  position: relative;
+  font-size: 0;
+}
+
+.slick-dots {
+  position: absolute;
+  right: 13%;
+  bottom: 60px;
+}
+
+[type="button"] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 10px;
+  border: 1px solid white;
+  background-color: transparent;
+  font-size: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+.slick-active {
+  &>button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 10px;
+    border: 1px solid white;
+    background-color: white;
+  }
+}

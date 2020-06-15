@@ -8,7 +8,7 @@
     object-position: center;
     min-height: 500px;
     height: 100%;
-    width: 100%;
+    width: 100vw;
   }
   &__description {
     @include flex-column(column, center);

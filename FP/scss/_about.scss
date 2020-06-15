@@ -1,5 +1,4 @@
 .about {
-  min-height: 754px;
   background-color :$aboutBgColor;
   position: relative;
   &__img {
@@ -20,7 +19,7 @@
   }
   &__items {
     margin-top: 65px;
-    margin-bottom: 15px;
+    margin-bottom: 24px;
     @include flex(space-between, stretch, wrap);
   }
   &__item {
@@ -40,18 +39,30 @@
 
 @media (max-width: 1600px) {
   .about__img img{
-    max-width: 100%;
-    right: 30px;
+    max-width: 38vw;
+    right: 6vw;
   }
 }
 
-@media (max-width: 1257px) {
-  .about__img img {
-    width: 96%;
+@media (max-width: 1200px) {
+  .about {
+    &__img img{
+      right: 3vw;
+    }
+    &__article {
+      margin-top: 40px;
+    }
+    &__items {
+      margin-top: 40px;
+      margin-bottom: 0;
+    }
+    .about__item {
+      padding-bottom: 35px;
+    }
   }
 }
 
-@media (max-width: 1200px){
+@media (max-width: 992px){
   .about {
     &__img {
       width: auto;
@@ -67,18 +78,7 @@
     }
     &__article {
       max-width: 100%;
-      margin-top: 40px;
     }
-    &__items {
-      margin-top: 40px;
-      margin-bottom: 0;
-    }
-  }
-}
-
-@media (max-width: 992px) {
-  .about__item {
-    padding-bottom: 35px;
   }
 }
 
@@ -87,19 +87,15 @@
     &__article {
       margin-top: 30px;
     }
-
     &__items {
       margin-top: 30px;
-      margin-bottom: 0;
     }
-
     &__icon {
       display: none;
       margin-right: 15px;
       flex-shrink: 0;
       width: 41px;
     }
-
     &__mobile {
       display: block;
       flex-shrink: 0;

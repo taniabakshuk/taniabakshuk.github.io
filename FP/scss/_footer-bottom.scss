@@ -1,0 +1,45 @@
+.footer-bottom {
+  background-color: $submitBgColor;
+  &__copyright {
+    padding-top: 45px;
+    padding-bottom: 30px;
+    font: 14px 'roboto-regular';
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    color: $inputBgColor;
+  }
+  &__social {
+    @include flex(center);
+    padding-bottom: 50px;
+  }
+  &__item {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: $inputBgColor;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &__link {
+    @include flex(center, center);
+    font-size: 18px;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: $submitBgColor;
+    transition: .5s;
+    &:hover {
+      color: white;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .footer-bottom {
+    &__copyright {
+      font-size: 12px;
+    }
+  }
+}
