@@ -81,6 +81,7 @@ ul {
     height: 55px;
   }
 }
+
 .home>.container {
   @include flex(space-between, flex-start);
 }
@@ -89,6 +90,7 @@ ul {
     @include flex-column();
   }
 }
+
 .about>.container {
   @include flex();
 }
@@ -97,6 +99,7 @@ ul {
     @include flex-column(column, center);
   }
 }
+
 .skills>.container {
   @include flex(space-between);
 }
@@ -105,15 +108,19 @@ ul {
     @include flex-column();
   }
 }
+
 .resume-download>.container {
    @include flex(center);
  }
+
 .testimonials>.container {
   @include flex(center);
 }
+
 .portfolio>.container:first-child {
-  @include flex(center);
+  @include flex(center, center);
 }
+
 .footer-top>.container {
   @include flex(space-between);
 }

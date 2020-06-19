@@ -26,25 +26,27 @@
       }
     }
   }
+
   &__title {
     margin-bottom: 35px;
     font: 18px 'roboto-bold';
     color: white;
     text-transform: uppercase;
   }
-  &__link {
-    display: block;
-    width: 40%;
-    text-decoration: none;
+  &__button {
+    width: 30%;
     font: 18px 'roboto-regular';
     color: $fontText;
     line-height: 30px;
+    transition: .5s;
+    cursor: pointer;
     &:hover {
       color: white;
     }
   }
   &__icon {
     visibility: hidden;
+    opacity: 0;
     display: block;
     color: white;
     position: absolute;
@@ -53,11 +55,12 @@
     margin-right: -50%;
     transform: translate(-50%, -50%);
     z-index: 100;
+    transition: .5s;
   }
   &__project {
     margin-bottom: 40px;
-    position: relative;
     transition: .5s;
+    position: relative;
     animation: move 2s forwards;
     @keyframes move {
       from {
@@ -73,6 +76,7 @@
     }
     &:hover .portfolio__icon {
       visibility: visible;
+      opacity: 1;
     }
   }
   &__img {
@@ -98,6 +102,10 @@
   }
 }
 
+.active {
+  color: white;
+}
+
 @media (max-width: 1200px) {
   .portfolio {
     &__box {
@@ -107,16 +115,13 @@
     &__projects {
       @include flex(space-around, stretch, wrap);
     }
-  }
-}
-@media (max-width: 1200px) {
-  .portfolio {
-    &__link {
+    &__button {
       font-size: 16px;
       line-height: 28px;
     }
   }
 }
+
 @media (max-width: 400px) {
   .portfolio {
     &__filter {
@@ -132,7 +137,7 @@
     &__title {
       margin-bottom: 20px;
     }
-    &__link {
+    &__button {
       line-height: 25px;
     }
   }

@@ -11,13 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-    />
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
           integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 </head>
-<body>
-<div class="hero">
+<body class="body">
+<section class="hero">
     <div class="hero__slide">
         <img src="img/slide1.jpg" class="hero__img" alt="web designer">
         <div class="hero__description">
@@ -39,7 +38,7 @@
             <button class="button button_white">Learn more</button>
         </div>
     </div>
-</div>
+</section>
 <header class="header">
     <div class="container">
         <div class="logo">
@@ -57,23 +56,24 @@
             </ul>
         </nav>
         <div class="hamburger">
-            <input id="hamburger__toggle" type="checkbox">
-            <label class="hamburger__btn" for="hamburger__toggle">
-                <span></span>
-            </label>
-            <ul class="hamburger__menu">
-                <li class="hamburger__item"><a class="hamburger__link" href="#">Home</a></li>
-                <li class="hamburger__item"><a class="hamburger__link" href="#">About me</a></li>
-                <li class="hamburger__item"><a class="hamburger__link" href="#">Skills</a></li>
-                <li class="hamburger__item"><a class="hamburger__link" href="#">Resume</a></li>
-                <li class="hamburger__item"><a class="hamburger__link" href="#">Testimonials</a></li>
-                <li class="hamburger__item"><a class="hamburger__link" href="#">Portfolio</a></li>
-                <li class="hamburger__item"><a class="hamburger__link" href="#">Contact me</a></li>
-            </ul>
+            <button class="hamburger__button">
+                <span class="hamburger__icon"></span>
+            </button>
+            <nav>
+                <ul class="hamburger__menu" id="menu">
+                    <li class="hamburger__item title-h2"><a class="hamburger__link" href="#home">Home</a></li>
+                    <li class="hamburger__item title-h2"><a class="hamburger__link" href="#about">About me</a></li>
+                    <li class="hamburger__item title-h2"><a class="hamburger__link" href="#skills">Skills</a></li>
+                    <li class="hamburger__item title-h2"><a class="hamburger__link" href="#resume">Resume</a></li>
+                    <li class="hamburger__item title-h2"><a class="hamburger__link" href="#testimonials">Testimonials</a></li>
+                    <li class="hamburger__item title-h2"><a class="hamburger__link" href="#portfolio">Portfolio</a></li>
+                    <li class="hamburger__item title-h2"><a class="hamburger__link" href="#contact">Contact me</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
 </header>
-<section class="home">
+<section class="home" id="home">
     <div class="container">
         <div class="home__cell">
             <h2 class="title-h2 animate__animated animate__pulse wow">Values</h2>
@@ -95,7 +95,7 @@
         </div>
     </div>
 </section>
-<section class="about">
+<section class="about" id="about">
     <div class="container">
         <div class="about__img">
             <img src="img/about.jpg" alt="web designer">
@@ -166,7 +166,7 @@
         </div>
     </div>
 </section>
-<section class="skills">
+<section class="skills" id="skills">
     <div class="container">
         <div class="skills__box">
             <h2 class="title-h2 animate__animated animate__pulse wow">My skills</h2>
@@ -199,7 +199,7 @@
         </div>
     </div>
 </section>
-<section class="resume-download">
+<section class="resume-download" id="resume">
     <div class="container">
         <div class="resume-download__box">
             <h2 class="title-h2 animate__animated animate__pulse wow">Resume</h2>
@@ -288,8 +288,24 @@
         </div>
     </div>
 </section>
-<section class="testimonials">
+<section class="testimonials" id="testimonials">
     <div class="container">
+        <div class="testimonials__box">
+            <blockquote class="testimonials__blockquote">"Lorem ipsum dolor sit amet, ea doming
+                epicuri iudicabit nam, te usu virtute placerat. Purto brute
+                disputando cu est, eam dicam soluta ei. Vel dicam vivendo
+                accusata ei, cum ne periculis molestiae pri. Lorem ipsum dolor sit amet, ea doming
+                epicuri iudicabit nam."</blockquote>
+            <address class="testimonials__address">John Sfftone</address>
+        </div>
+        <div class="testimonials__box">
+            <blockquote class="testimonials__blockquote">"Lorem ipsum dolor sit amet, ea doming
+                epicuri iudicabit nam, te usu virtute placerat. Purto brute
+                disputando cu est, eam dicam soluta ei. Vel dicam vivendo
+                accusata ei, cum ne periculis molestiae pri. Lorem ipsum dolor sit amet, ea doming
+                epicuri iudicabit nam."</blockquote>
+            <address class="testimonials__address">John Sfftone</address>
+        </div>
         <div class="testimonials__box">
             <blockquote class="testimonials__blockquote">"Lorem ipsum dolor sit amet, ea doming
                 epicuri iudicabit nam, te usu virtute placerat. Purto brute
@@ -300,7 +316,7 @@
         </div>
     </div>
 </section>
-<section class="portfolio">
+<section class="portfolio" id="portfolio">
     <div class="container">
         <div class="portfolio__box">
             <div class="title-h2 animate__animated animate__pulse wow">Portfolio</div>
@@ -314,12 +330,12 @@
             <div class="portfolio__filter wow">
                 <p class="portfolio__title">Filter by category</p>
                 <ul>
-                    <li><a href="#" class="portfolio__link">All</a></li>
-                    <li><a href="#" class="portfolio__link">Themes</a></li>
-                    <li><a href="#" class="portfolio__link">Icons</a></li>
-                    <li><a href="#" class="portfolio__link">Patterns</a></li>
-                    <li><a href="#" class="portfolio__link">Mockups</a></li>
-                    <li><a href="#" class="portfolio__link">UI Kits</a></li>
+                    <li class="portfolio__button active">All</li>
+                    <li class="portfolio__button">Themes</li>
+                    <li class="portfolio__button">Icons</li>
+                    <li class="portfolio__button">Patterns</li>
+                    <li class="portfolio__button">Mockups</li>
+                    <li class="portfolio__button">UI Kits</li>
                 </ul>
             </div>
             <a href="#" class="portfolio__project wow">
@@ -373,8 +389,8 @@
         </div>
     </div>
 </section>
-<div class="footer">
-    <div class="footer-top">
+<section class="footer">
+    <div class="footer-top" id="contact">
         <div class="container">
             <div class="footer-top__box">
                 <h2 class="title-h2 title-h2_white animate__animated animate__pulse wow">Contact me</h2>
@@ -409,7 +425,6 @@
             </form>
         </div>
     </div>
-
     <div class="footer-bottom">
         <div class="container">
             <div class="footer-bottom__copyright">Copyright 2014 Focal - Build with passion</div>
@@ -448,14 +463,14 @@
         </div>
     </div>
 
-</div>
-
-<script src="js/wow.min.js"></script>
+</section>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
+<script src="js/main.js"></script>
+<script src="js/wow.min.js"></script>
 
 <script>
     new WOW().init();
@@ -468,6 +483,24 @@
             autoplaySpeed: 4000,
     });
     });
+    $(document).ready(function(){
+        $('.testimonials>.container').slick({
+            arrows: false,
+            dots: true,
+        });
+    });
 </script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#menu").on("click","a", function (event) {
+            event.preventDefault();
+            var id  = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1200);
+        });
+    });
+</script>
+
 </body>
 </html>

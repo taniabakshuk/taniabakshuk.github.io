@@ -1,9 +1,7 @@
 .testimonials {
   background-color: $aboutBgColor;
   &__box{
-    max-width: 1060px;
-    padding-top: 100px;
-    padding-bottom: 150px;
+    padding: 100px 5% 150px;
   }
   &__blockquote {
     font: 24px 'roboto-regular';
