@@ -2,6 +2,9 @@
   &__box {
     @include flex(space-between);
     border-bottom: 1px solid #ccc;
+    &:last-child {
+      border-bottom: none;
+    }
   }
   &__article {
     width: 550px;
@@ -10,7 +13,7 @@
   }
   &__cards {
     width: 550px;
-    margin-top: 180px;
+    margin-top: 170px;
   }
 }
 
@@ -21,7 +24,7 @@
       margin-right: 50px;
     }
     &__cards {
-      margin-top: 95px;
+      margin-top: 105px;
     }
   }
 }
@@ -31,7 +34,7 @@
       margin-right: 30px;
     }
     &__cards {
-      margin-top: 80px;
+      margin-top: 85px;
     }
   }
 }

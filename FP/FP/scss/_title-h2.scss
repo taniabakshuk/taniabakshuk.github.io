@@ -2,6 +2,9 @@
   font: 30px 'roboto-bold';
   color: $fontTitle;
   text-transform: uppercase;
+  &_white {
+    color: white;
+  }
 }
 
 @media (max-width: 992px) {
