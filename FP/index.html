@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -288,7 +287,7 @@
         </div>
     </div>
 </section>
-<section class="testimonials" id="testimonials">
+<div class="testimonials" id="testimonials">
     <div class="container">
         <div class="testimonials__box">
             <blockquote class="testimonials__blockquote">"Lorem ipsum dolor sit amet, ea doming
@@ -315,11 +314,11 @@
             <address class="testimonials__address">John Sfftone</address>
         </div>
     </div>
-</section>
+</div>
 <section class="portfolio" id="portfolio">
     <div class="container">
         <div class="portfolio__box">
-            <div class="title-h2 animate__animated animate__pulse wow">Portfolio</div>
+            <h2 class="title-h2 animate__animated animate__pulse wow">Portfolio</h2>
             <div class="text text_center">Lorem ipsum dolor sit amet, ea doming epicuri iudicabit nam,
                 te usu virtute placerat. Purto brute disputando cu est, eam dicam soluta ei.
                 Vel dicam vivendo accusata ei, cum ne periculis molestiae pri.</div>
@@ -409,16 +408,16 @@
                 </div>
             </div>
             <form action="#" class="footer-top__form">
-                <label>
-                    <p class="text text_margin_0 text_white">Name <span>*</span></p>
+                <label class="text text_white">
+                    Name <span>*</span>
                     <input type="text" name="name" class="footer-top__input text text_white">
                 </label>
-                <label>
-                    <p class="text text_white">Email Address <span>*</span></p>
+                <label class="text text_white">
+                    Email Address <span>*</span>
                     <input type="email" name="email" class="footer-top__input text text_white">
                 </label>
-                <label>
-                    <p class="text text_white">Message <span>*</span></p>
+                <label class="text text_white">
+                    Message <span>*</span>
                     <textarea name="message" class="footer-top__textarea text text_white"></textarea>
                 </label>
                 <input type="submit" value="contact me" class="footer-top__submit">
@@ -465,9 +464,9 @@
 
 </section>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
 <script src="js/main.js"></script>
 <script src="js/wow.min.js"></script>
@@ -491,7 +490,7 @@
     });
 </script>
 
-<script type="text/javascript">
+<script>
     $(document).ready(function(){
         $("#menu").on("click","a", function (event) {
             event.preventDefault();
