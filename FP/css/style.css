@@ -342,7 +342,7 @@
     padding-top: 100px;
     padding-bottom: 20px;
     list-style: none;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
     z-index: 10; }
     .hamburger__menu_visible {
@@ -370,7 +370,9 @@
 @media (max-width: 576px) {
   .hamburger__button {
     top: 20px;
-    right: 20px; } }
+    right: 20px; }
+  .hamburger__link {
+    padding-right: 20px; } }
 .skills__box {
   width: 540px;
   padding-top: 95px; }
