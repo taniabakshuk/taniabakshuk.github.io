@@ -15,6 +15,7 @@ button.onclick = function () {
 $('.hamburger__link').click(function(){
     menu.classList.remove('hamburger__menu_visible');
     body.classList.remove('body_hidden');
+    cross.classList.remove('hamburger__icon_cross');
 });
 
 
