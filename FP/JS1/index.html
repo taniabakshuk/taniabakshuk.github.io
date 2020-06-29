@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="login login_hidden" id="login">
+    <form action="#" class="login__form">
+        <h1 class="login__title">Login Page</h1>
+        <label class="login__label">Email
+        <input type="email" class="login__input input" placeholder="Enter your email">
+        </label>
+        <p class="login__text">Wrong email</p>
+        <label class="login__label">Password
+        <input type="password" class="login__input input" placeholder="Enter your password, 8 min, 12 max">
+        </label>
+        <p class="login__text">Wrong password</p>
+        <input type="submit" value="Login" class="login__submit">
+    </form>
+</div>
+<div class="todo" id="todo">
+    <div class="container">
+        <h1 class="todo__title">todo list</h1>
+        <div class="todo__task">
+            <input type="text" class="todo__input-task" placeholder="Task">
+            <button class="button">Add</button>
+        </div>
+        <div class="todo__filter">
+            <div class="todo__box-left">
+                <div class="todo__wrap">
+                    <button class="todo__button-up"></button>
+                    <button class="todo__button-down"></button>
+                </div>
+                <div class="todo__wrap">
+                    <button class="todo__button-small-up"></button>
+                    <span>123</span>
+                    <button class="todo__button-small-down"></button>
+                </div>
+            </div>
+            <div class="todo__search">
+                <input type="text" class="todo__input-search">
+                <button class="todo__button todo__button-search"><i class="fas fa-search todo__icon"></i></button>
+            </div>
+            <div class="todo__box-right">
+                <button class="todo__button"><i class="fas fa-filter todo__icon"></i></button>
+            </div>
+        </div>
+        <div class="task">
+            <div class="task__box-left">
+                <time class="task__time">12.10.2018 13:24</time>
+                <div class="task__priority">1</div>
+                <div class="task__wrap">
+                    <button class="task__priority-button"><i class="fas fa-chevron-up"></i></button>
+                    <button class="task__priority-button"><i class="fas fa-chevron-down"></i></button>
+                </div>
+            </div>
+            <p class="task__text">Task for create user page</p>
+            <div class="task__box-right">
+                <button class="task__button task__button_green"><i class="fas fa-pencil-alt"></i></button>
+                <button class="task__button"><i class="fas fa-check"></i></button>
+                <button class="task__button"><i class="fas fa-trash-alt"></i></button>
+            </div>
+        </div>
+        <div class="task">
+            <div class="task__box-left">
+                <time class="task__time">12.10.2018 13:24</time>
+                <div class="task__priority">1</div>
+                <div class="task__wrap">
+                    <button  class="task__priority-button"><i class="fas fa-chevron-up"></i></button>
+                    <button class="task__priority-button"><i class="fas fa-chevron-down"></i></button>
+                </div>
+            </div>
+            <p class="task__text">Task for create user page</p>
+            <div class="task__box-right">
+                <button class="task__button task__button_green"><i class="fas fa-pencil-alt"></i></button>
+                <button class="task__button"><i class="fas fa-check"></i></button>
+                <button class="task__button"><i class="fas fa-trash-alt"></i></button>
+            </div>
+        </div>
+        <div class="task">
+            <div class="task__box-left">
+                <time class="task__time">12.10.2018 13:24</time>
+                <div class="task__priority">1</div>
+                <div class="task__wrap">
+                    <button class="task__priority-button"><i class="fas fa-chevron-up"></i></button>
+                    <button class="task__priority-button"><i class="fas fa-chevron-down"></i></button>
+                </div>
+            </div>
+            <p class="task__text">Task for create user page</p>
+            <div class="task__box-right">
+                <button class="task__button task__button_green"><i class="fas fa-pencil-alt"></i></button>
+                <button class="task__button"><i class="fas fa-check"></i></button>
+                <button class="task__button"><i class="fas fa-trash-alt"></i></button>
+            </div>
+        </div>
+        <div class="task">
+            <div class="task__box-left">
+                <time class="task__time">12.10.2018 13:24</time>
+                <div class="task__priority">1</div>
+                <div class="task__wrap">
+                    <button class="task__priority-button"><i class="fas fa-chevron-up"></i></button>
+                    <button class="task__priority-button"><i class="fas fa-chevron-down"></i></button>
+                </div>
+            </div>
+            <p class="task__text">Create todo list for example. Create todo list for example.
+                Create todo list for example.Create todo list for example.Create todo list for example.
+                Create todo list for example.Create todo list for example.Create todo list for example.
+                Create todo list for example.Create todo list for example.Create todo list for example.
+                Create todo list for example.Create todo list for example.Create todo list for example.
+                Create todo list for example.Create todo list for example.Create todo list for example.
+            </p>
+            <div class="task__box-right">
+                <button class="task__button task__button_green"><i class="fas fa-pencil-alt"></i></button>
+                <button class="task__button"><i class="fas fa-check"></i></button>
+                <button class="task__button"><i class="fas fa-trash-alt"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-delete modal-delete_hidden" id="modal-delete">
+    <h1 class="modal-delete__title">Delete item?</h1>
+    <div class="modal-delete__box">
+        <button class="modal-delete__button button">No</button>
+        <button class="modal-delete__button button">Yes</button>
+    </div>
+</div>
+<div class="modal-edit modal-edit_hidden" id="modal-edit">
+    <h1 class="modal-edit__title">Edit text</h1>
+    <input type="text" class="modal-edit__input">
+    <div class="modal-edit__box">
+        <button class="modal-edit__button button">Cancel</button>
+        <button class="modal-edit__button button">Save</button>
+    </div>
+</div>
+
+
+</body>
+</html>
