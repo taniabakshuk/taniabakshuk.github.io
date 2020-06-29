@@ -1,0 +1,9 @@
+.input {
+  &:focus {
+    outline: none;
+  }
+  &::-webkit-input-placeholder {color:darkgrey;}
+  &::-moz-placeholder          {color:darkgrey;}/* Firefox 19+ */
+  &:-moz-placeholder           {color:darkgrey;}/* Firefox 18- */
+  &:-ms-input-placeholder      {color:darkgrey;}
+}
