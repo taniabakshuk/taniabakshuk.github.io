@@ -34,6 +34,9 @@
     &:focus {
       box-shadow: 0 2px 5px 0 rgba(0,0,0,0.75);
     }
+    &_validation {
+      border: 1px solid red;
+    }
   }
   &__submit {
     align-self: flex-end;
@@ -56,11 +59,15 @@
     cursor: pointer;
   }
   &__text {
+    visibility: hidden;
     padding-top: 5px;
     padding-left: 8px;
     color: red;
     &:first-of-type {
       margin-bottom: 20px;
+    }
+    &_visible {
+      visibility: visible;
     }
   }
 

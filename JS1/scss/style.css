@@ -8,9 +8,6 @@
   src: url("../fonts/roboto-regular.woff2") format("woff2"), url("../fonts/roboto-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-.body_hidden {
-  overflow: hidden; }
-
 .container {
   max-width: 1200px;
   padding: 0 15px;
@@ -48,8 +45,6 @@
     font-size: 14px; }
     .login__input:focus {
       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.75); }
-    .login__input_validation {
-      border: 1px solid red; }
   .login__submit {
     align-self: flex-end;
     padding: 8px 35px;
@@ -73,15 +68,10 @@
     color: red; }
     .login__text:first-of-type {
       margin-bottom: 20px; }
-    .login__text_visible {
-      visibility: visible; }
 
 .todo {
   padding: 40px 0;
-  font: 14px 'roboto-regular';
-  display: none; }
-  .todo_show {
-    display: block; }
+  font: 14px 'roboto-regular'; }
   .todo__title {
     font-size: 24px;
     font-weight: normal;
@@ -288,11 +278,6 @@
     text-align: justify;
     padding: 10px;
     background-color: lightgrey; }
-    .task__text_done {
-      text-decoration: line-through;
-      background-color: white;
-      border: 1px solid lightgrey;
-      color: lightgrey; }
   .task__button {
     flex-shrink: 0;
     width: 40px;
@@ -313,38 +298,30 @@
       background-color: forestgreen; }
 
 .modal-delete {
-  display: none; }
-  .modal-delete_show {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0; }
+  font-family: 'roboto-regular';
+  padding-top: 30px;
+  padding-bottom: 15px;
+  width: 300px;
+  height: 150px;
+  background-color: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); }
+  .modal-delete_hidden {
+    display: none; }
   .modal-delete__box {
-    font-family: 'roboto-regular';
-    padding-top: 30px;
-    padding-bottom: 15px;
-    width: 300px;
-    height: 150px;
-    background-color: #e5e5e5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    z-index: 10; }
-  .modal-delete__buttons {
     width: 230px;
     display: flex;
     justify-content: space-between; }
   .modal-delete__title {
     font-weight: normal; }
-  .modal-delete__btn {
+  .modal-delete__button {
     padding: 8px 40px;
     font-size: 16px;
     color: #00b3ff;
@@ -354,9 +331,9 @@
     border-radius: 3px;
     cursor: pointer;
     transition: .5s; }
-    .modal-delete__btn:focus {
+    .modal-delete__button:focus {
       outline: none; }
-    .modal-delete__btn:hover {
+    .modal-delete__button:hover {
       background-color: #00b3ff;
       color: white; }
 

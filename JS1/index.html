@@ -9,18 +9,18 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
           integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <script src="js/main.js"></script>
+
 </head>
-<body>
-<div class="login login_hidden" id="login">
+<body id="body">
+<div class="login" id="login">
     <form action="#" class="login__form">
         <h1 class="login__title">Login Page</h1>
         <label class="login__label">Email
-        <input type="email" class="login__input input" placeholder="Enter your email">
+        <input type="email" name="email" id="email" class="login__input input" placeholder="Enter your email">
         </label>
         <p class="login__text">Wrong email</p>
         <label class="login__label">Password
-        <input type="password" class="login__input input" placeholder="Enter your password, 8 min, 12 max">
+        <input type="password" name="password" id="pass" class="login__input input" placeholder="Enter your password, 8 min, 12 max">
         </label>
         <p class="login__text">Wrong password</p>
         <input type="submit" value="Login" class="login__submit">
@@ -31,7 +31,7 @@
         <h1 class="todo__title">todo list</h1>
         <div class="todo__task">
             <input type="text" class="todo__input-task" placeholder="Task">
-            <button class="button">Add</button>
+            <button class="button" id="btn-add-task">Add</button>
         </div>
         <div class="todo__filter">
             <div class="todo__box-left">
@@ -53,83 +53,15 @@
                 <button class="todo__button"><i class="fas fa-filter todo__icon"></i></button>
             </div>
         </div>
-        <div class="task">
-            <div class="task__box-left">
-                <time class="task__time">12.10.2018 13:24</time>
-                <div class="task__priority">1</div>
-                <div class="task__wrap">
-                    <button class="task__priority-button"><i class="fas fa-chevron-up"></i></button>
-                    <button class="task__priority-button"><i class="fas fa-chevron-down"></i></button>
-                </div>
-            </div>
-            <p class="task__text">Task for create user page</p>
-            <div class="task__box-right">
-                <button class="task__button task__button_green"><i class="fas fa-pencil-alt"></i></button>
-                <button class="task__button"><i class="fas fa-check"></i></button>
-                <button class="task__button"><i class="fas fa-trash-alt"></i></button>
-            </div>
-        </div>
-        <div class="task">
-            <div class="task__box-left">
-                <time class="task__time">12.10.2018 13:24</time>
-                <div class="task__priority">1</div>
-                <div class="task__wrap">
-                    <button  class="task__priority-button"><i class="fas fa-chevron-up"></i></button>
-                    <button class="task__priority-button"><i class="fas fa-chevron-down"></i></button>
-                </div>
-            </div>
-            <p class="task__text">Task for create user page</p>
-            <div class="task__box-right">
-                <button class="task__button task__button_green"><i class="fas fa-pencil-alt"></i></button>
-                <button class="task__button"><i class="fas fa-check"></i></button>
-                <button class="task__button"><i class="fas fa-trash-alt"></i></button>
-            </div>
-        </div>
-        <div class="task">
-            <div class="task__box-left">
-                <time class="task__time">12.10.2018 13:24</time>
-                <div class="task__priority">1</div>
-                <div class="task__wrap">
-                    <button class="task__priority-button"><i class="fas fa-chevron-up"></i></button>
-                    <button class="task__priority-button"><i class="fas fa-chevron-down"></i></button>
-                </div>
-            </div>
-            <p class="task__text">Task for create user page</p>
-            <div class="task__box-right">
-                <button class="task__button task__button_green"><i class="fas fa-pencil-alt"></i></button>
-                <button class="task__button"><i class="fas fa-check"></i></button>
-                <button class="task__button"><i class="fas fa-trash-alt"></i></button>
-            </div>
-        </div>
-        <div class="task">
-            <div class="task__box-left">
-                <time class="task__time">12.10.2018 13:24</time>
-                <div class="task__priority">1</div>
-                <div class="task__wrap">
-                    <button class="task__priority-button"><i class="fas fa-chevron-up"></i></button>
-                    <button class="task__priority-button"><i class="fas fa-chevron-down"></i></button>
-                </div>
-            </div>
-            <p class="task__text">Create todo list for example. Create todo list for example.
-                Create todo list for example.Create todo list for example.Create todo list for example.
-                Create todo list for example.Create todo list for example.Create todo list for example.
-                Create todo list for example.Create todo list for example.Create todo list for example.
-                Create todo list for example.Create todo list for example.Create todo list for example.
-                Create todo list for example.Create todo list for example.Create todo list for example.
-            </p>
-            <div class="task__box-right">
-                <button class="task__button task__button_green"><i class="fas fa-pencil-alt"></i></button>
-                <button class="task__button"><i class="fas fa-check"></i></button>
-                <button class="task__button"><i class="fas fa-trash-alt"></i></button>
-            </div>
-        </div>
     </div>
 </div>
-<div class="modal-delete modal-delete_hidden" id="modal-delete">
-    <h1 class="modal-delete__title">Delete item?</h1>
+<div class="modal-delete" id="modal-delete">
     <div class="modal-delete__box">
-        <button class="modal-delete__button button">No</button>
-        <button class="modal-delete__button button">Yes</button>
+        <h1 class="modal-delete__title">Delete item?</h1>
+        <div class="modal-delete__buttons">
+            <button class="modal-delete__btn button" id="btn-delete-no">No</button>
+            <button class="modal-delete__btn button" id="btn-delete-yes">Yes</button>
+        </div>
     </div>
 </div>
 <div class="modal-edit modal-edit_hidden" id="modal-edit">
@@ -141,6 +73,7 @@
     </div>
 </div>
 
+<script src="js/main.js"></script>
 
 </body>
 </html>

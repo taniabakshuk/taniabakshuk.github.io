@@ -56,6 +56,12 @@
     text-align: justify;
     padding: 10px;
     background-color: lightgrey;
+    &_done {
+      text-decoration: line-through;
+      background-color: white;
+      border: 1px solid lightgrey;
+      color: lightgrey;
+    }
 
   }
   &__button {
