@@ -1,20 +1,28 @@
 .modal-edit {
-  font-family: 'roboto-regular';
-  padding: 15px 0;
-  width: 400px;
-  height: 300px;
-  background-color: #e5e5e5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  &_hidden {
-    display: none;
+  display: none;
+  &_show {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+  }
+  &__box {
+    font-family: 'roboto-regular';
+    padding: 15px 0;
+    width: 400px;
+    height: 300px;
+    background-color: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
   }
   &__input {
     width: 330px;
@@ -26,7 +34,7 @@
       outline: none;
     }
   }
-  &__box {
+  &__buttons {
     width: 330px;
     display: flex;
     justify-content: space-between;
@@ -34,7 +42,7 @@
   &__title {
     font-weight: normal;
   }
-  &__button {
+  &__btn {
     padding: 8px 40px;
     font-size: 16px;
     color: #00b3ff;
