@@ -1,13 +1,9 @@
 .modal-edit {
-  display: none;
-  &_show {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.5);
-    position: fixed;
-    top: 0;
-  }
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
   &__box {
     font-family: 'roboto-regular';
     padding: 15px 0;

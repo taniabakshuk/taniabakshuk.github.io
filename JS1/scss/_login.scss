@@ -1,8 +1,8 @@
 .login {
   font: 14px 'roboto-regular';
-  &_hidden {
-    display: none;
-  }
+  //&_hidden {
+  //  display: none;
+  //}
   &__form {
     display: flex;
     flex-direction: column;
@@ -69,6 +69,10 @@
     &_visible {
       visibility: visible;
     }
+  }
+  &__error {
+    padding-left: 20px;
+    color: red;
   }
 
 }

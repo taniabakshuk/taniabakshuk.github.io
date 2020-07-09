@@ -18,8 +18,6 @@
 
 .login {
   font: 14px 'roboto-regular'; }
-  .login_hidden {
-    display: none; }
   .login__form {
     display: flex;
     flex-direction: column;
@@ -75,13 +73,13 @@
       margin-bottom: 20px; }
     .login__text_visible {
       visibility: visible; }
+  .login__error {
+    padding-left: 20px;
+    color: red; }
 
 .todo {
   padding: 40px 0;
-  font: 14px 'roboto-regular';
-  display: none; }
-  .todo_show {
-    display: block; }
+  font: 14px 'roboto-regular'; }
   .todo__title {
     font-size: 24px;
     font-weight: normal;
@@ -311,16 +309,15 @@
       background-color: aquamarine; }
     .task__button_green {
       background-color: forestgreen; }
+    .task__button_check {
+      background-color: #00CC44; }
 
 .modal-delete {
-  display: none; }
-  .modal-delete_show {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0; }
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0; }
   .modal-delete__box {
     font-family: 'roboto-regular';
     padding-top: 30px;
@@ -361,14 +358,11 @@
       color: white; }
 
 .modal-edit {
-  display: none; }
-  .modal-edit_show {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0; }
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0; }
   .modal-edit__box {
     font-family: 'roboto-regular';
     padding: 15px 0;
