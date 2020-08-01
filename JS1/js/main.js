@@ -130,34 +130,61 @@ window.addEventListener('load', function () {
             milliseconds: new Date().getMilliseconds(),
             todo: $inputTask.value,
             priority: 1,
+            done: false,
+            id: taskList.length,
         };
 
         taskList.push(newTask);
         $inputTask.value = '';
 
+        saveInStorage();
+        render();
+    }
+
+
+    function genItem(task, index){
+        // после каждого рендера таска его индекс будет разный в зависимости от порядка елементов
         let $task = document.createElement('div');
-        if (newTask.todo.length === 0) $task = '';
         $task.className = 'task';
-        $task.id = taskList.length - 1;
-        $task.innerHTML = `            <div class="task__box-left">
+        $task.id = index;
+        if(task.done) $task.classList += 'task-done';
+        const template = `<div class="task__box-left">
                 <div class="task__wrap">
-                    <time class="task__time">${newTask.date = (newTask.date < 10) ? '0' + newTask.date : newTask.date}.${newTask.month = (newTask.month < 10) ? '0' + newTask.month : newTask.month}.${newTask.year}</time>
-                    <time class="task__time">${newTask.hour}:${newTask.minute = (newTask.minute < 10) ? '0' + newTask.minute : newTask.minute}</time>
+                    <time class="task__time">${task.date = (task.date < 10) ? '0' + task.date : task.date}.${task.month = (task.month < 10) ? '0' + task.month : task.month}.${task.year}</time>
+                    <time class="task__time">${task.hour}:${task.minute = (task.minute < 10) ? '0' + task.minute : task.minute}</time>
                     </div>
-                    <div class="task__priority">${newTask.priority}</div>
+                    <div class="task__priority">${task.priority}</div>
                     <div class="task__wrap">
                         <button class="task__priority-button"><i class="fas fa-chevron-up"></i></button>
                         <button class="task__priority-button"><i class="fas fa-chevron-down"></i></button>
                     </div>
                 </div>
-                <p class="task__text">${newTask.todo}</p>
+                <p class="task__text">${task.todo}</p>
                 <div class="task__box-right">
                     <button class="task__button task__button_green" data-show-delete = 'modal-edit'><i class="fas fa-pencil-alt" data-show-delete = 'modal-edit'></i></button>
                     <button class="task__button check"><i class="fas fa-check"></i></button>
                     <button class="task__button" data-show-delete = 'modal-delete'><i class="fas fa-trash-alt" data-show-delete = 'modal-delete'></i></button>
                 </div>`;
-        $todo.children[0].append($task);
+        $task.innerHTML = template;
+        // убираем внешний div заменяя на первый елемент который и есть таском
+        $task = $task.firstChild;
+        return $task;
+    }
+
+    function done(itemIndex){
+        // если done === false то становится true и наоборот
+        taskList[itemIndex].done = !taskList[itemIndex].done;
         saveInStorage();
+        addTask();
+    }
+
+    function render() {
+        $todo.children[0].innerHTML = '';  // очищаем перед перерисовкой
+        // для циклов с полным перебором используйте forEach
+        for (let i = 0; i < taskList.length; i++) {
+            const item = genItem(taskList[i], i);
+            $todo.children[0].append(item);
+        }
     }
 
 
@@ -176,7 +203,41 @@ window.addEventListener('load', function () {
 
 
 
+
 });
+
+
+
+// function addTaskDom() {
+    //     let item = taskList.slice(-1);
+    //         let $task = document.createElement('div');
+    //         $task.className = 'task';
+    //         $task.id = taskList.length - 1;
+    //         $task.innerHTML = `            <div class="task__box-left">
+    //             <div class="task__wrap">
+    //                 <time class="task__time">${item[0].date = (item[0].date < 10) ? '0' + item[0].date : item[0].date}.${item[0].month = (item[0].month < 10) ? '0' + item[0].month : item[0].month}.${item[0].year}</time>
+    //                 <time class="task__time">${item[0].hour}:${item[0].minute = (item[0].minute < 10) ? '0' + item[0].minute : item[0].minute}</time>
+    //                 </div>
+    //                 <div class="task__priority">${item[0].priority}</div>
+    //                 <div class="task__wrap">
+    //                     <button class="task__priority-button"><i class="fas fa-chevron-up"></i></button>
+    //                     <button class="task__priority-button"><i class="fas fa-chevron-down"></i></button>
+    //                 </div>
+    //             </div>
+    //             <p class="task__text">${item[0].todo}</p>
+    //             <div class="task__box-right">
+    //                 <button class="task__button task__button_green" data-show-delete = 'modal-edit'><i class="fas fa-pencil-alt" data-show-delete = 'modal-edit'></i></button>
+    //                 <button class="task__button check"><i class="fas fa-check"></i></button>
+    //                 <button class="task__button" data-show-delete = 'modal-delete'><i class="fas fa-trash-alt" data-show-delete = 'modal-delete'></i></button>
+    //             </div>`;
+    //         $todo.children[0].append($task);
+    //
+    // }
+
+
+
+
+
 
 
 
