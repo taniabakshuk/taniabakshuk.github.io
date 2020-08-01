@@ -1,0 +1,96 @@
+.task {
+  display: flex;
+  padding: 10px 0;
+  //&:nth-of-type(even) .task__text {
+  //  background-color: #c8f3fa;
+  //}
+  &__box-left {
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+  }
+  &__box-right {
+    width: 180px;
+    display: flex;
+    justify-content: space-around;
+  }
+  &__time {
+    width: 100px;
+    font-size: 20px;
+    text-align: center;
+  }
+  &__priority {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 35px;
+    background-color: grey;
+    font-size: 20px;
+    color: white;
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  &__priority-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    & i {
+      color: #00b3ff;
+      font-size: 20px;
+      transition: .5s;
+      &:hover {
+        color: aquamarine;
+      }
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__text {
+    width: 740px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+    background-color: #c8f3fa;
+    &_done {
+      text-decoration: line-through;
+      background-color: white;
+      border: 1px solid lightgrey;
+      color: lightgrey;
+    }
+
+  }
+  &__button {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #00b3ff;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+    &>i {
+      font-size: 18px;
+      color: white;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      background-color: aquamarine;
+    }
+    &_green {
+      background-color: forestgreen;
+    }
+    &_check {
+      background-color: #00CC44;
+    }
+  }
+
+}
+
+

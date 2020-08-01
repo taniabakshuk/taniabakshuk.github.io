@@ -1,0 +1,17 @@
+.button {
+  padding: 8px 40px;
+  font: 14px 'roboto-regular';
+  color: white;
+  text-transform: uppercase;
+  background-color: #00b3ff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .5s;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-color: aquamarine;
+  }
+}

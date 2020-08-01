@@ -1,0 +1,409 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'roboto-regular';
+  src: url("../fonts/roboto-regular.woff2") format("woff2"), url("../fonts/roboto-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+.body_hidden {
+  overflow: hidden; }
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+.login {
+  font: 14px 'roboto-regular'; }
+  .login__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 400px;
+    padding: 60px;
+    background-color: white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.75);
+    border: 1px solid darkgrey;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; }
+  .login__title {
+    margin-bottom: 20px;
+    font-weight: normal; }
+  .login__input {
+    width: 100%;
+    height: 35px;
+    border: 1px solid;
+    border-radius: 5px;
+    padding-left: 8px;
+    font-size: 14px; }
+    .login__input:focus {
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.75); }
+    .login__input_validation {
+      border: 1px solid red; }
+  .login__submit {
+    align-self: flex-end;
+    padding: 8px 35px;
+    font: 14px 'roboto-regular';
+    color: white;
+    background-color: #2754cd;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .5s; }
+    .login__submit:focus {
+      outline: none; }
+    .login__submit:hover {
+      background-color: #00b3ff; }
+  .login__label {
+    cursor: pointer; }
+  .login__text {
+    visibility: hidden;
+    padding-top: 5px;
+    padding-left: 8px;
+    color: red; }
+    .login__text:first-of-type {
+      margin-bottom: 20px; }
+    .login__text_visible {
+      visibility: visible; }
+  .login__error {
+    padding-left: 20px;
+    color: red; }
+
+.todo {
+  padding: 40px 0;
+  font: 14px 'roboto-regular'; }
+  .todo__title {
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase; }
+  .todo__task {
+    display: flex;
+    justify-content: flex-end;
+    margin: 40px 0; }
+  .todo__input-task {
+    width: 100%;
+    margin-right: 15px;
+    border: none;
+    border-bottom: 1px solid darkgrey; }
+    .todo__input-task:focus {
+      outline: none; }
+  .todo__filter {
+    margin: 30px 0;
+    display: flex;
+    align-items: flex-end; }
+  .todo__box-left {
+    width: 250px;
+    min-width: 168px;
+    display: flex;
+    justify-content: space-between; }
+  .todo__box-right {
+    width: 180px;
+    display: flex;
+    justify-content: center; }
+  .todo__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30%; }
+    .todo__wrap span {
+      letter-spacing: -1px;
+      color: grey;
+      line-height: 15px; }
+    .todo__wrap:first-of-type {
+      margin-left: 20%;
+      margin-right: 0; }
+  .todo__button-up {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 12px 12px 12px;
+    border-color: transparent transparent grey transparent;
+    margin-bottom: 2px;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s; }
+    .todo__button-up:hover {
+      border-color: transparent transparent aquamarine transparent; }
+    .todo__button-up:focus {
+      outline: none; }
+  .todo__button-down {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 12px 0 12px;
+    border-color: grey transparent transparent transparent;
+    margin-top: 2px;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s; }
+    .todo__button-down:hover {
+      border-color: aquamarine transparent aquamarine transparent; }
+    .todo__button-down:focus {
+      outline: none; }
+  .todo__button-small-up {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 9px 7px 9px;
+    border-color: transparent transparent grey transparent;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .5s; }
+    .todo__button-small-up:hover {
+      border-color: transparent transparent aquamarine transparent; }
+    .todo__button-small-up:focus {
+      outline: none; }
+  .todo__button-small-down {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 9px 0 9px;
+    border-color: grey transparent transparent transparent;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .5s; }
+    .todo__button-small-down:hover {
+      border-color: aquamarine transparent transparent transparent; }
+    .todo__button-small-down:focus {
+      outline: none; }
+  .todo__search {
+    width: 740px;
+    position: relative; }
+  .todo__input-search {
+    width: 100%;
+    padding-left: 30px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid darkgrey; }
+    .todo__input-search:focus {
+      outline: none; }
+  .todo__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer; }
+    .todo__button:focus {
+      outline: none; }
+  .todo__button-search {
+    position: absolute;
+    left: 0;
+    bottom: 2px; }
+  .todo__icon {
+    font-size: 25px;
+    color: grey;
+    transition: .5s; }
+    .todo__icon:hover {
+      color: aquamarine; }
+
+.button {
+  padding: 8px 40px;
+  font: 14px 'roboto-regular';
+  color: white;
+  text-transform: uppercase;
+  background-color: #00b3ff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .5s; }
+  .button:focus {
+    outline: none; }
+  .button:hover {
+    background-color: aquamarine; }
+
+.input {
+  /* Firefox 19+ */
+  /* Firefox 18- */ }
+  .input:focus {
+    outline: none; }
+  .input::-webkit-input-placeholder {
+    color: darkgrey; }
+  .input::-moz-placeholder {
+    color: darkgrey; }
+  .input:-moz-placeholder {
+    color: darkgrey; }
+  .input:-ms-input-placeholder {
+    color: darkgrey; }
+
+.task {
+  display: flex;
+  padding: 10px 0; }
+  .task__box-left {
+    width: 250px;
+    display: flex;
+    justify-content: space-around; }
+  .task__box-right {
+    width: 180px;
+    display: flex;
+    justify-content: space-around; }
+  .task__time {
+    width: 100px;
+    font-size: 20px;
+    text-align: center; }
+  .task__priority {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 35px;
+    background-color: grey;
+    font-size: 20px;
+    color: white; }
+  .task__wrap {
+    display: flex;
+    flex-direction: column; }
+  .task__priority-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer; }
+    .task__priority-button i {
+      color: #00b3ff;
+      font-size: 20px;
+      transition: .5s; }
+      .task__priority-button i:hover {
+        color: aquamarine; }
+    .task__priority-button:focus {
+      outline: none; }
+  .task__text {
+    width: 740px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+    background-color: #c8f3fa; }
+    .task__text_done {
+      text-decoration: line-through;
+      background-color: white;
+      border: 1px solid lightgrey;
+      color: lightgrey; }
+  .task__button {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #00b3ff;
+    border: none;
+    cursor: pointer;
+    transition: .5s; }
+    .task__button > i {
+      font-size: 18px;
+      color: white; }
+    .task__button:focus {
+      outline: none; }
+    .task__button:hover {
+      background-color: aquamarine; }
+    .task__button_green {
+      background-color: forestgreen; }
+    .task__button_check {
+      background-color: #00CC44; }
+
+.modal-delete {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0; }
+  .modal-delete__box {
+    font-family: 'roboto-regular';
+    padding-top: 30px;
+    padding-bottom: 15px;
+    width: 300px;
+    height: 150px;
+    background-color: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; }
+  .modal-delete__buttons {
+    width: 230px;
+    display: flex;
+    justify-content: space-between; }
+  .modal-delete__title {
+    font-weight: normal; }
+  .modal-delete__btn {
+    padding: 8px 40px;
+    font-size: 16px;
+    color: #00b3ff;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .5s; }
+    .modal-delete__btn:focus {
+      outline: none; }
+    .modal-delete__btn:hover {
+      background-color: #00b3ff;
+      color: white; }
+
+.modal-edit {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0; }
+  .modal-edit__box {
+    font-family: 'roboto-regular';
+    padding: 15px 0;
+    width: 400px;
+    height: 300px;
+    background-color: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); }
+  .modal-edit__input {
+    width: 330px;
+    height: 180px;
+    border: none;
+    padding: 5px;
+    font-size: 16px; }
+    .modal-edit__input:focus {
+      outline: none; }
+  .modal-edit__buttons {
+    width: 330px;
+    display: flex;
+    justify-content: space-between; }
+  .modal-edit__title {
+    font-weight: normal; }
+  .modal-edit__btn {
+    padding: 8px 40px;
+    font-size: 16px;
+    color: #00b3ff;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .5s; }
+    .modal-edit__btn:focus {
+      outline: none; }
+    .modal-edit__btn:hover {
+      background-color: #00b3ff;
+      color: white; }
+
+/*# sourceMappingURL=style.css.map */

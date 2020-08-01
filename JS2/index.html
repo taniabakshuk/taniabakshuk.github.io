@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+</head>
+<body id="body">
+<div class="login" id="login">
+    <form action="#" class="login__form" name="login">
+        <h1 class="login__title">Login Page</h1>
+        <label class="login__label">Email <span class="login__error"></span>
+        <input type="email" name="email" id="email" class="login__input input" placeholder="Enter your email">
+        </label>
+        <p class="login__text">Wrong email</p>
+        <label class="login__label">Password <span class="login__error"></span>
+        <input type="password" name="password" id="pass" class="login__input input" placeholder="Enter your password, 8 min, 12 max">
+        </label>
+        <p class="login__text">Wrong password</p>
+        <input type="submit" value="Login" class="login__submit">
+    </form>
+</div>
+<div class="todo" id="todo" hidden>
+    <div class="container">
+        <h1 class="todo__title">todo list</h1>
+        <div class="todo__task">
+            <input type="text" class="todo__input-task" placeholder="Task">
+            <button class="button" id="btn-add-task">Add</button>
+        </div>
+        <div class="todo__filter">
+            <div class="todo__box-left">
+                <div class="todo__wrap">
+                    <button class="todo__button-up"></button>
+                    <button class="todo__button-down"></button>
+                </div>
+                <div class="todo__wrap">
+                    <button class="todo__button-small-up"></button>
+                    <span>123</span>
+                    <button class="todo__button-small-down"></button>
+                </div>
+            </div>
+            <div class="todo__search">
+                <input type="text" class="todo__input-search">
+                <button class="todo__button todo__button-search"><i class="fas fa-search todo__icon"></i></button>
+            </div>
+            <div class="todo__box-right">
+                <button class="todo__button"><i class="fas fa-filter todo__icon"></i></button>
+            </div>
+        </div>
+        <div id="tasksContainer">
+
+        </div>
+    </div>
+</div>
+<div class="modal-delete" id="modal-delete" hidden>
+    <div class="modal-delete__box">
+        <h1 class="modal-delete__title">Delete item?</h1>
+        <div class="modal-delete__buttons">
+            <button class="modal-delete__btn button" data-show-delete = 'modal-delete'>No</button>
+            <button class="modal-delete__btn button" id="remove">Yes</button>
+        </div>
+    </div>
+</div>
+<div class="modal-edit" id="modal-edit" hidden>
+    <div class="modal-edit__box">
+        <h1 class="modal-edit__title">Edit text</h1>
+        <input type="text" class="modal-edit__input">
+        <div class="modal-edit__buttons">
+            <button class="modal-edit__btn button" data-show-delete = 'modal-edit'>Cancel</button>
+            <button class="modal-edit__btn button" data-edit = 'save'>Save</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
